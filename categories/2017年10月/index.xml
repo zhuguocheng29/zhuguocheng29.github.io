@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2017年10月 on 好好学习，天天向上</title>
-    <link>http://zhuguocheng29.github.io/categories/2017%E5%B9%B410%E6%9C%88/</link>
+    <link>https://zhuguocheng29.github.io/categories/2017%E5%B9%B410%E6%9C%88/</link>
     <description>Recent content in 2017年10月 on 好好学习，天天向上</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Zhuguocheng](http://www.zhuguocheng29.cn). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
     <lastBuildDate>Thu, 26 Oct 2017 11:06:42 +0800</lastBuildDate>
     
-	<atom:link href="http://zhuguocheng29.github.io/categories/2017%E5%B9%B410%E6%9C%88/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zhuguocheng29.github.io/categories/2017%E5%B9%B410%E6%9C%88/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>hbase实战经验</title>
-      <link>http://zhuguocheng29.github.io/2017/10/26/hbase%E5%AE%9E%E6%88%98%E7%BB%8F%E9%AA%8C/</link>
+      <link>https://zhuguocheng29.github.io/2017/10/26/hbase%E5%AE%9E%E6%88%98%E7%BB%8F%E9%AA%8C/</link>
       <pubDate>Thu, 26 Oct 2017 11:06:42 +0800</pubDate>
       
-      <guid>http://zhuguocheng29.github.io/2017/10/26/hbase%E5%AE%9E%E6%88%98%E7%BB%8F%E9%AA%8C/</guid>
+      <guid>https://zhuguocheng29.github.io/2017/10/26/hbase%E5%AE%9E%E6%88%98%E7%BB%8F%E9%AA%8C/</guid>
       <description>&lt;p&gt;&lt;/p&gt;</description>
     </item>
     

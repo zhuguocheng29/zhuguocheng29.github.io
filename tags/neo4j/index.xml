@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Neo4j on 好好学习，天天向上</title>
-    <link>http://zhuguocheng29.github.io/tags/neo4j/</link>
+    <link>https://zhuguocheng29.github.io/tags/neo4j/</link>
     <description>Recent content in Neo4j on 好好学习，天天向上</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Zhuguocheng](http://www.zhuguocheng29.cn). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
     <lastBuildDate>Mon, 31 Jul 2017 22:01:12 +0800</lastBuildDate>
     
-	<atom:link href="http://zhuguocheng29.github.io/tags/neo4j/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://zhuguocheng29.github.io/tags/neo4j/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>基于Neo4j的RDF存储模式</title>
-      <link>http://zhuguocheng29.github.io/2017/07/31/%E5%9F%BA%E4%BA%8Eneo4j%E7%9A%84rdf%E5%AD%98%E5%82%A8%E6%A8%A1%E5%BC%8F/</link>
+      <link>https://zhuguocheng29.github.io/2017/07/31/%E5%9F%BA%E4%BA%8Eneo4j%E7%9A%84rdf%E5%AD%98%E5%82%A8%E6%A8%A1%E5%BC%8F/</link>
       <pubDate>Mon, 31 Jul 2017 22:01:12 +0800</pubDate>
       
-      <guid>http://zhuguocheng29.github.io/2017/07/31/%E5%9F%BA%E4%BA%8Eneo4j%E7%9A%84rdf%E5%AD%98%E5%82%A8%E6%A8%A1%E5%BC%8F/</guid>
+      <guid>https://zhuguocheng29.github.io/2017/07/31/%E5%9F%BA%E4%BA%8Eneo4j%E7%9A%84rdf%E5%AD%98%E5%82%A8%E6%A8%A1%E5%BC%8F/</guid>
       <description>&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Neo4j</title>
-      <link>http://zhuguocheng29.github.io/2017/07/30/neo4j/</link>
+      <link>https://zhuguocheng29.github.io/2017/07/30/neo4j/</link>
       <pubDate>Sun, 30 Jul 2017 16:59:37 +0800</pubDate>
       
-      <guid>http://zhuguocheng29.github.io/2017/07/30/neo4j/</guid>
+      <guid>https://zhuguocheng29.github.io/2017/07/30/neo4j/</guid>
       <description>&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
