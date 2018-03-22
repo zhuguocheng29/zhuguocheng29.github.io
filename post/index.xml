@@ -7,10 +7,19 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Zhuguocheng](http://www.zhuguocheng29.cn). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
-    <lastBuildDate>Fri, 09 Mar 2018 22:09:28 +0800</lastBuildDate>
+    <lastBuildDate>Wed, 14 Mar 2018 20:36:46 +0800</lastBuildDate>
     
 	<atom:link href="https://zhuguocheng29.github.io/post/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>机器学习--Ensemble</title>
+      <link>https://zhuguocheng29.github.io/2018/03/14/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--ensemble/</link>
+      <pubDate>Wed, 14 Mar 2018 20:36:46 +0800</pubDate>
+      
+      <guid>https://zhuguocheng29.github.io/2018/03/14/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--ensemble/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
     
     <item>
       <title>机器学习--有结构的学习</title>

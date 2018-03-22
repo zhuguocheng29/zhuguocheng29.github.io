@@ -47,7 +47,7 @@
 
 
 <meta itemprop="dateModified" content="2018-03-09T22:09:28&#43;08:00" />
-<meta itemprop="wordCount" content="134">
+<meta itemprop="wordCount" content="626">
 
 
 
@@ -188,7 +188,7 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        108
+        109
         <span>文章</span>
       </div>
       <div class="article-info-block">
@@ -288,10 +288,10 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2018-03-09 22:09:28 &#43;0800 CST" itemprop="datePublished">2018-03-09</time>
             &middot;
-            134
+            626
             words
             &middot;
-            1
+            2
             minute read
         </div>
         
@@ -387,6 +387,191 @@
 <h3 id="2-structured-svm">2. Structured SVM</h3>
 
 <p><img src="/post/StructuredLearning/22.png" center="center"/></p>
+
+<h4 id="separable-case">Separable case</h4>
+
+<p>对于separable case，通过下图公式可求得\(\hat{w}\)</p>
+
+<p><img src="/post/StructuredLearning/23.png" center="center"/></p>
+
+<h4 id="non-separable-case">Non-separable case</h4>
+
+<h5 id="第一种情形">第一种情形</h5>
+
+<p><img src="/post/StructuredLearning/24.png" center="center"/></p>
+
+<p>如下图\(C_n\)是第一幅图减去第三幅图的值，然后使用梯度下降方求得\(w\)</p>
+
+<p><img src="/post/StructuredLearning/25.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/26.png" center="center"/></p>
+
+<h5 id="第二种情形">第二种情形</h5>
+
+<p><img src="/post/StructuredLearning/27.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/28.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/29.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/30.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/31.png" center="center"/></p>
+
+<h4 id="structured-svm">Structured SVM</h4>
+
+<p><img src="/post/StructuredLearning/32.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/33.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/34.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/35.png" center="center"/></p>
+
+<p>求解损失函数\(C\)的方法如下：</p>
+
+<p><img src="/post/StructuredLearning/36.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/37.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/38.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/39.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/40.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/41.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/42.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/43.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/44.png" center="center"/></p>
+
+<h4 id="multi-class-svm">Multi-class SVM</h4>
+
+<p>下图中，\(y_k\)在哪个类，\(x\)就在这个类对应的位置</p>
+
+<p><img src="/post/StructuredLearning/45.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/46.png" center="center"/></p>
+
+<p>下图改为： There are only \(N(K-1)\) constraints</p>
+
+<p><img src="/post/StructuredLearning/47.png" center="center"/></p>
+
+<h4 id="binary-svm">Binary SVM</h4>
+
+<p>Set \(K = 2,y \in {\{1,2}\}\)</p>
+
+<p><img src="/post/StructuredLearning/48.png" center="center"/></p>
+
+<h4 id="beyond-structured-svm">Beyond Structured SVM</h4>
+
+<p><img src="/post/StructuredLearning/49.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/50.png" center="center"/></p>
+
+<h3 id="3-sequence-labeling">3. Sequence Labeling</h3>
+
+<p><img src="/post/StructuredLearning/51.png" center="center"/></p>
+
+<p>以下均针对POS tagging例子（对于句子中的词，输入词，输出词性）</p>
+
+<p><img src="/post/StructuredLearning/52.png" center="center"/></p>
+
+<h4 id="hidden-markov-model-hmm">Hidden Markov Model(HMM)</h4>
+
+<p>HMM的假设：</p>
+
+<ol>
+<li>基于语法产生了一个POS sequence</li>
+<li>给定一个POS的tag，基于字典产生对应的词汇，最后生成一个句子</li>
+</ol>
+
+<p><img src="/post/StructuredLearning/53.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/54.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/55.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/56.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/57.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/58.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/59.png" center="center"/></p>
+
+<p>HMM缺点：会出现训练集中没有出现过的情形</p>
+
+<p><img src="/post/StructuredLearning/60.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/61.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/62.png" center="center"/></p>
+
+<h4 id="conditional-random-field-crf">Conditional Random Field(CRF)</h4>
+
+<p>CRF是HMM的改进，但是原理一样</p>
+
+<p><img src="/post/StructuredLearning/63.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/64.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/65.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/66.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/67.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/68.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/69.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/70.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/71.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/72.png" center="center"/></p>
+
+<p>之后使用梯度上升法训练</p>
+
+<p><img src="/post/StructuredLearning/73.png" center="center"/></p>
+
+<p>t是word,s是tag</p>
+
+<p><img src="/post/StructuredLearning/74.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/75.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/76.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/77.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/78.png" center="center"/></p>
+
+<h3 id="4-rnn-lstm-vs-hmm-crf-structured-perceptron-svm">4. RNN，LSTM VS HMM,CRF,Structured Perceptron/SVM</h3>
+
+<p>针对t时刻的输出，单向的RNN,LSTM只能看到1-t-1时刻的情况，却看不到t+1及其之后的情况。而HMM使用Viterbi算法考虑了这个句子。但是viterbi算法对双向RNN效果未知</p>
+
+<p>其余如下图</p>
+
+<p><img src="/post/StructuredLearning/79.png" center="center"/></p>
+
+<h4 id="将两种模型整合">将两种模型整合</h4>
+
+<p><img src="/post/StructuredLearning/80.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/81.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/82.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/83.png" center="center"/></p>
+
+<p>Conditional GAN可以用字符串生成图片，现在有种想法：GAN可以作为训练structured learning的一种方式</p>
+
+<p><img src="/post/StructuredLearning/84.png" center="center"/></p>
         </div>
         <footer class="article-footer">
     <a data-url="https://zhuguocheng29.github.io/2018/03/09/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E6%9C%89%E7%BB%93%E6%9E%84%E7%9A%84%E5%AD%A6%E4%B9%A0/" data-id="8d0f9e2ee95f76cf9947d78d81ff67f4" class="article-share-link">
@@ -475,6 +660,13 @@
     
 
     
+    <a href="https://zhuguocheng29.github.io/2018/03/14/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--ensemble/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          下一篇
+      </strong>
+      <div class="article-nav-title">机器学习--Ensemble</div>
+    </a>
+    
 </nav>
 
 
@@ -517,6 +709,26 @@
         <ul id="recent-post">
 					<hr style="margin-right:90px;height:1px;border:0px;background-color:#D5D5D5;solid #eceff2;"/>
 
+            
+            <li>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category" >
+                        
+                        <a class="article-category-link" style="font-size:14px;" href="https://zhuguocheng29.github.io/categories/2018%E5%B9%B43%E6%9C%88">
+                        2018年3月
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://zhuguocheng29.github.io/2018/03/14/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--ensemble/" class="title">机器学习--Ensemble</a></p>
+                    <p class="item-date"  style="margin-top:3px">
+                        <time datetime="2018-03-14 20:36:46 &#43;0800 CST" itemprop="datePublished">2018-03-14</time>
+                    </p>
+                </div>
+            </li>
+			<hr style="margin-right:90px;height:1px;border:0px;background-color:#D5D5D5;solid #eceff2;"/>
             
             <li>
                 <div class="item-inner">
@@ -593,26 +805,6 @@
                     <p class="item-title"><a href="https://zhuguocheng29.github.io/2018/03/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A02%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B/" class="title">机器学习--无监督学习2(生成模型)</a></p>
                     <p class="item-date"  style="margin-top:3px">
                         <time datetime="2018-03-07 15:37:04 &#43;0800 CST" itemprop="datePublished">2018-03-07</time>
-                    </p>
-                </div>
-            </li>
-			<hr style="margin-right:90px;height:1px;border:0px;background-color:#D5D5D5;solid #eceff2;"/>
-            
-            <li>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category" >
-                        
-                        <a class="article-category-link" style="font-size:14px;" href="https://zhuguocheng29.github.io/categories/2018%E5%B9%B43%E6%9C%88">
-                        2018年3月
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="https://zhuguocheng29.github.io/2018/03/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/" class="title">机器学习--无监督学习</a></p>
-                    <p class="item-date"  style="margin-top:3px">
-                        <time datetime="2018-03-05 09:23:01 &#43;0800 CST" itemprop="datePublished">2018-03-05</time>
                     </p>
                 </div>
             </li>
@@ -709,7 +901,7 @@
                 <a class="category-list-link" href="https://zhuguocheng29.github.io/categories/2018%E5%B9%B43%E6%9C%88">
                     2018年3月
                 </a>
-                <span class="category-list-count">7</span>
+                <span class="category-list-count">8</span>
             </li>
             
         </ul>
@@ -870,7 +1062,7 @@
                 <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0">
                     机器学习
                 </a>
-                <span class="category-list-count">7</span>
+                <span class="category-list-count">8</span>
             </li>
             
             <li class="category-list-item">

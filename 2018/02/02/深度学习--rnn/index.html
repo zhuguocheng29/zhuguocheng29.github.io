@@ -47,7 +47,7 @@
 
 
 <meta itemprop="dateModified" content="2018-02-02T13:39:05&#43;08:00" />
-<meta itemprop="wordCount" content="1692">
+<meta itemprop="wordCount" content="1904">
 
 
 
@@ -188,7 +188,7 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        108
+        109
         <span>文章</span>
       </div>
       <div class="article-info-block">
@@ -288,7 +288,7 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2018-02-02 13:39:05 &#43;0800 CST" itemprop="datePublished">2018-02-02</time>
             &middot;
-            1692
+            1904
             words
             &middot;
             4
@@ -602,6 +602,18 @@ $$</p>
 <p>$$
 \frac{\partial{E}}{\partial{U}}=\sum_{i=1}^t\frac{\partial{E}}{\partial{U_i}}
 $$</p>
+
+<h3 id="rnn缺点">RNN缺点</h3>
+
+<p>即w在不同的时间点被反复的使用，所以较难训练</p>
+
+<p><img src="/post/RNN_LSTM/28.png" center="center"/></p>
+
+<p>解决方式：</p>
+
+<ol>
+<li>LSTM,LSTM可以解决RNN中的gradient vanishing的问题。（不是gradient explode的问题）为什么？因为RNN中的memory每次会被覆盖且只来自于上一次的memory,而LSTM的memory是原先的memory与input相加得来。LSTM里的memory除非forget gate关闭，否则之前的memory的值的影响不会消失</li>
+</ol>
         </div>
         <footer class="article-footer">
     <a data-url="https://zhuguocheng29.github.io/2018/02/02/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0--rnn/" data-id="3d9c5d44eb5586ec250326b95355114d" class="article-share-link">
@@ -752,6 +764,26 @@ $$</p>
                     </p>
                     
                     
+                    <p class="item-title"><a href="https://zhuguocheng29.github.io/2018/03/14/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--ensemble/" class="title">机器学习--Ensemble</a></p>
+                    <p class="item-date"  style="margin-top:3px">
+                        <time datetime="2018-03-14 20:36:46 &#43;0800 CST" itemprop="datePublished">2018-03-14</time>
+                    </p>
+                </div>
+            </li>
+			<hr style="margin-right:90px;height:1px;border:0px;background-color:#D5D5D5;solid #eceff2;"/>
+            
+            <li>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category" >
+                        
+                        <a class="article-category-link" style="font-size:14px;" href="https://zhuguocheng29.github.io/categories/2018%E5%B9%B43%E6%9C%88">
+                        2018年3月
+                        </a>
+                    </p>
+                    
+                    
                     <p class="item-title"><a href="https://zhuguocheng29.github.io/2018/03/09/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E6%9C%89%E7%BB%93%E6%9E%84%E7%9A%84%E5%AD%A6%E4%B9%A0/" class="title">机器学习--有结构的学习</a></p>
                     <p class="item-date"  style="margin-top:3px">
                         <time datetime="2018-03-09 22:09:28 &#43;0800 CST" itemprop="datePublished">2018-03-09</time>
@@ -815,26 +847,6 @@ $$</p>
                     <p class="item-title"><a href="https://zhuguocheng29.github.io/2018/03/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A02%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B/" class="title">机器学习--无监督学习2(生成模型)</a></p>
                     <p class="item-date"  style="margin-top:3px">
                         <time datetime="2018-03-07 15:37:04 &#43;0800 CST" itemprop="datePublished">2018-03-07</time>
-                    </p>
-                </div>
-            </li>
-			<hr style="margin-right:90px;height:1px;border:0px;background-color:#D5D5D5;solid #eceff2;"/>
-            
-            <li>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category" >
-                        
-                        <a class="article-category-link" style="font-size:14px;" href="https://zhuguocheng29.github.io/categories/2018%E5%B9%B43%E6%9C%88">
-                        2018年3月
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="https://zhuguocheng29.github.io/2018/03/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/" class="title">机器学习--无监督学习</a></p>
-                    <p class="item-date"  style="margin-top:3px">
-                        <time datetime="2018-03-05 09:23:01 &#43;0800 CST" itemprop="datePublished">2018-03-05</time>
                     </p>
                 </div>
             </li>
@@ -931,7 +943,7 @@ $$</p>
                 <a class="category-list-link" href="https://zhuguocheng29.github.io/categories/2018%E5%B9%B43%E6%9C%88">
                     2018年3月
                 </a>
-                <span class="category-list-count">7</span>
+                <span class="category-list-count">8</span>
             </li>
             
         </ul>
@@ -1092,7 +1104,7 @@ $$</p>
                 <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0">
                     机器学习
                 </a>
-                <span class="category-list-count">7</span>
+                <span class="category-list-count">8</span>
             </li>
             
             <li class="category-list-item">

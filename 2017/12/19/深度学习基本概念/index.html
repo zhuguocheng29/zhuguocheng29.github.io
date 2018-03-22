@@ -47,7 +47,7 @@
 
 
 <meta itemprop="dateModified" content="2017-12-19T15:57:34&#43;08:00" />
-<meta itemprop="wordCount" content="3514">
+<meta itemprop="wordCount" content="3500">
 
 
 
@@ -188,7 +188,7 @@
     </div>
     <div class="article-info profile-block">
       <div class="article-info-block">
-        108
+        109
         <span>文章</span>
       </div>
       <div class="article-info-block">
@@ -288,10 +288,10 @@
             <i class="fa fa-calendar"></i>
             <time datetime="2017-12-19 15:57:34 &#43;0800 CST" itemprop="datePublished">2017-12-19</time>
             &middot;
-            3514
+            3500
             words
             &middot;
-            8
+            7
             minute read
         </div>
         
@@ -385,9 +385,9 @@
 
 <p>Hinton在DBN(深信度网络)中，则是利用此假设，提出了逐层贪心初始化的方法，进行实验：</p>
 
-<p>①Stage 1：先逐层用RBM使得参数学习到有效从输入中提取信息。进行生成模型P(X)P(X)。(Pre-Training)。</p>
+<p>①Stage 1：先逐层用RBM使得参数学习到有效从输入中提取信息。进行生成模型P(X)。(Pre-Training)。</p>
 
-<p>②Stage 2:  利用生成模型得到的参数作为搜索起点，进行判别模型P(Y|X)P(Y|X)。(Fine-Tuning)。</p>
+<p>②Stage 2:  利用生成模型得到的参数作为搜索起点，进行判别模型P(Y|X)。(Fine-Tuning)。</p>
 
 <p>RBM-Pre-training网络训练模型的过程可以看做对一个深层BP网络权值参数的初始化，使DBN克服BP网络因随机初始化权值参数而容易陷入局部最优和训练时间过长的问题点。</p>
 
@@ -419,9 +419,7 @@
 
 <p>交叉熵的概念就是用来衡量估计模型与真实概率分布之间的差异情况的。</p>
 
-<p>与方差误差函数一样，交叉熵函数同样拥有两个性质，一个是非负性，一个是当真实输出a与期望输出y接近时，损失函数的函数值接近于0。</p>
-
-<p>另外，它可以克服方差代价函数更新权重过慢的问题。</p>
+<p>与方差误差函数一样，交叉熵函数同样拥有两个性质，一个是非负性，一个是当真实输出a与期望输出y接近时，损失函数的函数值接近于0。另外，它可以克服方差代价函数更新权重过慢的问题。</p>
 
 <ol>
 <li>二次代价函数，其中\(y(x)\)表示实际值，\(a\)表示网络输出值，\(n\)表示训练样本数：</li>
@@ -445,7 +443,7 @@
 
 <p><strong>二次代价函数和交叉熵代价函数比较:</strong></p>
 
-<p>对于二次代价函数：初始的代价(误差)越大，训练越慢，与希望的错误越大，改正的幅度越大，从而学习得越快的期望不符</p>
+<p>对于二次代价函数：初始的代价(误差)越大训练越慢 与 希望的错误越大改正的幅度越大从而学习得越快的期望不符</p>
 
 <p>对于交叉熵代价函数：该梯度公式中的\(\sigma(z)-y\)表示网络输出值与实际值之间的误差。当误差越大，梯度就越大，参数\(w\)调整得越快，训练速度也就越快。</p>
 
@@ -463,15 +461,15 @@
 
 <p>更加形象的如下图所示：</p>
 
-<p><img src="https://pic2.zhimg.com/50/v2-87b232ab0e292a536e94b73952caadd0_hd.jpg" alt="" /></p>
+<p><img src="/post/DLConcept/2.jpg" center="center"/></p>
 
 <p>对于对于softmax函数求导，给出一个简单例子，如下图所示，该图只显示了隐含层和输出层</p>
 
-<p><img src="https://pic4.zhimg.com/50/v2-284da728c54de850e34573d6fe682965_hd.jpg" alt="" /></p>
+<p><img src="/post/DLConcept/3.jpg" center="center"/></p>
 
 <p>损失函数如下：</p>
 
-<p><img src="https://pic3.zhimg.com/50/v2-cd3d19d3680993cb9ae62d2fd110e43d_hd.jpg" alt="" /></p>
+<p><img src="/post/DLConcept/4.jpg" center="center"/></p>
 
 <p>其中y代表真实值，a代表<strong>softmax</strong>求出的值，又由于输出层使用的是<strong>one-hot</strong>编码，假设真实输出的第j个为1，那么：</p>
 
@@ -487,11 +485,11 @@
 
 <h4 id="对于第一种情况-j-i">对于第一种情况 <strong>j = i</strong>：</h4>
 
-<p><img src="https://pic3.zhimg.com/50/v2-40a344cb96d81d30aec0d91a95a04409_hd.jpg" alt="" /></p>
+<p><img src="/post/DLConcept/5.jpg" center="center"/></p>
 
 <p>那么：</p>
 
-<p><img src="https://pic3.zhimg.com/50/v2-da652b68fb126c709e69eda674fb42be_hd.jpg" alt="" /></p>
+<p><img src="/post/DLConcept/6.jpg" center="center"/></p>
 
 <p>则：</p>
 
@@ -499,11 +497,11 @@
 
 <h4 id="对于第二种情况-i-neq-j">对于第二种情况\(i\neq j\)</h4>
 
-<p><img src="https://pic4.zhimg.com/50/v2-a4edb7767bfed190991e86cbdaa472cc_hd.jpg" alt="" /></p>
+<p><img src="/post/DLConcept/7.jpg" center="center"/></p>
 
 <p>那么:</p>
 
-<p><img src="https://pic1.zhimg.com/50/v2-fa3ff8ff1c781e259a15b36b85c65fcc_hd.jpg" alt="" /></p>
+<p><img src="/post/DLConcept/8.jpg" center="center"/></p>
 
 <p>则：</p>
 
@@ -751,6 +749,26 @@
                     </p>
                     
                     
+                    <p class="item-title"><a href="https://zhuguocheng29.github.io/2018/03/14/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--ensemble/" class="title">机器学习--Ensemble</a></p>
+                    <p class="item-date"  style="margin-top:3px">
+                        <time datetime="2018-03-14 20:36:46 &#43;0800 CST" itemprop="datePublished">2018-03-14</time>
+                    </p>
+                </div>
+            </li>
+			<hr style="margin-right:90px;height:1px;border:0px;background-color:#D5D5D5;solid #eceff2;"/>
+            
+            <li>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category" >
+                        
+                        <a class="article-category-link" style="font-size:14px;" href="https://zhuguocheng29.github.io/categories/2018%E5%B9%B43%E6%9C%88">
+                        2018年3月
+                        </a>
+                    </p>
+                    
+                    
                     <p class="item-title"><a href="https://zhuguocheng29.github.io/2018/03/09/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E6%9C%89%E7%BB%93%E6%9E%84%E7%9A%84%E5%AD%A6%E4%B9%A0/" class="title">机器学习--有结构的学习</a></p>
                     <p class="item-date"  style="margin-top:3px">
                         <time datetime="2018-03-09 22:09:28 &#43;0800 CST" itemprop="datePublished">2018-03-09</time>
@@ -814,26 +832,6 @@
                     <p class="item-title"><a href="https://zhuguocheng29.github.io/2018/03/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A02%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B/" class="title">机器学习--无监督学习2(生成模型)</a></p>
                     <p class="item-date"  style="margin-top:3px">
                         <time datetime="2018-03-07 15:37:04 &#43;0800 CST" itemprop="datePublished">2018-03-07</time>
-                    </p>
-                </div>
-            </li>
-			<hr style="margin-right:90px;height:1px;border:0px;background-color:#D5D5D5;solid #eceff2;"/>
-            
-            <li>
-                <div class="item-inner">
-                    
-                    
-                    <p class="item-category" >
-                        
-                        <a class="article-category-link" style="font-size:14px;" href="https://zhuguocheng29.github.io/categories/2018%E5%B9%B43%E6%9C%88">
-                        2018年3月
-                        </a>
-                    </p>
-                    
-                    
-                    <p class="item-title"><a href="https://zhuguocheng29.github.io/2018/03/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/" class="title">机器学习--无监督学习</a></p>
-                    <p class="item-date"  style="margin-top:3px">
-                        <time datetime="2018-03-05 09:23:01 &#43;0800 CST" itemprop="datePublished">2018-03-05</time>
                     </p>
                 </div>
             </li>
@@ -930,7 +928,7 @@
                 <a class="category-list-link" href="https://zhuguocheng29.github.io/categories/2018%E5%B9%B43%E6%9C%88">
                     2018年3月
                 </a>
-                <span class="category-list-count">7</span>
+                <span class="category-list-count">8</span>
             </li>
             
         </ul>
@@ -1091,7 +1089,7 @@
                 <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0">
                     机器学习
                 </a>
-                <span class="category-list-count">7</span>
+                <span class="category-list-count">8</span>
             </li>
             
             <li class="category-list-item">
