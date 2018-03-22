@@ -2,85 +2,85 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>机器学习 on 好好学习，天天向上</title>
-    <link>https://zhuguocheng29.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
+    <link>http://zhuguocheng29.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
     <description>Recent content in 机器学习 on 好好学习，天天向上</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Zhuguocheng](http://www.zhuguocheng29.cn). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
     <lastBuildDate>Wed, 14 Mar 2018 20:36:46 +0800</lastBuildDate>
     
-	<atom:link href="https://zhuguocheng29.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://zhuguocheng29.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>机器学习--Ensemble</title>
-      <link>https://zhuguocheng29.github.io/2018/03/14/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--ensemble/</link>
+      <link>http://zhuguocheng29.github.io/2018/03/14/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--ensemble/</link>
       <pubDate>Wed, 14 Mar 2018 20:36:46 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/2018/03/14/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--ensemble/</guid>
+      <guid>http://zhuguocheng29.github.io/2018/03/14/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--ensemble/</guid>
       <description>&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>机器学习--有结构的学习</title>
-      <link>https://zhuguocheng29.github.io/2018/03/09/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E6%9C%89%E7%BB%93%E6%9E%84%E7%9A%84%E5%AD%A6%E4%B9%A0/</link>
+      <link>http://zhuguocheng29.github.io/2018/03/09/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E6%9C%89%E7%BB%93%E6%9E%84%E7%9A%84%E5%AD%A6%E4%B9%A0/</link>
       <pubDate>Fri, 09 Mar 2018 22:09:28 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/2018/03/09/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E6%9C%89%E7%BB%93%E6%9E%84%E7%9A%84%E5%AD%A6%E4%B9%A0/</guid>
+      <guid>http://zhuguocheng29.github.io/2018/03/09/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E6%9C%89%E7%BB%93%E6%9E%84%E7%9A%84%E5%AD%A6%E4%B9%A0/</guid>
       <description>&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>机器学习--SVM</title>
-      <link>https://zhuguocheng29.github.io/2018/03/09/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--svm/</link>
+      <link>http://zhuguocheng29.github.io/2018/03/09/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--svm/</link>
       <pubDate>Fri, 09 Mar 2018 14:57:03 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/2018/03/09/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--svm/</guid>
+      <guid>http://zhuguocheng29.github.io/2018/03/09/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--svm/</guid>
       <description>&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>机器学习--转移学习</title>
-      <link>https://zhuguocheng29.github.io/2018/03/08/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E8%BD%AC%E7%A7%BB%E5%AD%A6%E4%B9%A0/</link>
+      <link>http://zhuguocheng29.github.io/2018/03/08/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E8%BD%AC%E7%A7%BB%E5%AD%A6%E4%B9%A0/</link>
       <pubDate>Thu, 08 Mar 2018 22:04:39 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/2018/03/08/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E8%BD%AC%E7%A7%BB%E5%AD%A6%E4%B9%A0/</guid>
+      <guid>http://zhuguocheng29.github.io/2018/03/08/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E8%BD%AC%E7%A7%BB%E5%AD%A6%E4%B9%A0/</guid>
       <description>&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>机器学习--无监督学习2(生成模型)</title>
-      <link>https://zhuguocheng29.github.io/2018/03/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A02%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B/</link>
+      <link>http://zhuguocheng29.github.io/2018/03/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A02%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B/</link>
       <pubDate>Wed, 07 Mar 2018 15:37:04 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/2018/03/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A02%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B/</guid>
+      <guid>http://zhuguocheng29.github.io/2018/03/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A02%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B/</guid>
       <description>&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>机器学习--无监督学习</title>
-      <link>https://zhuguocheng29.github.io/2018/03/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/</link>
+      <link>http://zhuguocheng29.github.io/2018/03/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/</link>
       <pubDate>Mon, 05 Mar 2018 09:23:01 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/2018/03/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/</guid>
+      <guid>http://zhuguocheng29.github.io/2018/03/05/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A0/</guid>
       <description>&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>机器学习算法--EM算法</title>
-      <link>https://zhuguocheng29.github.io/2018/03/04/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--em%E7%AE%97%E6%B3%95/</link>
+      <link>http://zhuguocheng29.github.io/2018/03/04/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--em%E7%AE%97%E6%B3%95/</link>
       <pubDate>Sun, 04 Mar 2018 17:02:03 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/2018/03/04/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--em%E7%AE%97%E6%B3%95/</guid>
+      <guid>http://zhuguocheng29.github.io/2018/03/04/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E7%AE%97%E6%B3%95--em%E7%AE%97%E6%B3%95/</guid>
       <description>&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>机器学习基本概念</title>
-      <link>https://zhuguocheng29.github.io/2018/02/22/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</link>
+      <link>http://zhuguocheng29.github.io/2018/02/22/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</link>
       <pubDate>Thu, 22 Feb 2018 16:57:56 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/2018/02/22/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</guid>
+      <guid>http://zhuguocheng29.github.io/2018/02/22/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</guid>
       <description>&lt;p&gt;&lt;/p&gt;</description>
     </item>
     

@@ -2,22 +2,22 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Oceanbase on 好好学习，天天向上</title>
-    <link>https://zhuguocheng29.github.io/tags/oceanbase/</link>
+    <link>http://zhuguocheng29.github.io/tags/oceanbase/</link>
     <description>Recent content in Oceanbase on 好好学习，天天向上</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Zhuguocheng](http://www.zhuguocheng29.cn). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
     <lastBuildDate>Sat, 22 Jul 2017 23:29:46 +0800</lastBuildDate>
     
-	<atom:link href="https://zhuguocheng29.github.io/tags/oceanbase/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://zhuguocheng29.github.io/tags/oceanbase/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>OceanBase架构设计</title>
-      <link>https://zhuguocheng29.github.io/2017/07/22/oceanbase%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/</link>
+      <link>http://zhuguocheng29.github.io/2017/07/22/oceanbase%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/</link>
       <pubDate>Sat, 22 Jul 2017 23:29:46 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/2017/07/22/oceanbase%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/</guid>
+      <guid>http://zhuguocheng29.github.io/2017/07/22/oceanbase%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/</guid>
       <description>&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
