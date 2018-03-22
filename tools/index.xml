@@ -2,13 +2,13 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tools on 好好学习，天天向上</title>
-    <link>https://zhuguocheng29.github.io/tools/</link>
+    <link>http://zhuguocheng29.github.io/tools/</link>
     <description>Recent content in Tools on 好好学习，天天向上</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Zhuguocheng](http://www.zhuguocheng29.cn). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
     
-	<atom:link href="https://zhuguocheng29.github.io/tools/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://zhuguocheng29.github.io/tools/index.xml" rel="self" type="application/rss+xml" />
     
     
   </channel>

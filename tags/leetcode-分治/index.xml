@@ -2,31 +2,31 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Leetcode 分治 on 好好学习，天天向上</title>
-    <link>https://zhuguocheng29.github.io/tags/leetcode-%E5%88%86%E6%B2%BB/</link>
+    <link>http://zhuguocheng29.github.io/tags/leetcode-%E5%88%86%E6%B2%BB/</link>
     <description>Recent content in Leetcode 分治 on 好好学习，天天向上</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <copyright>Powered by [Zhuguocheng](http://www.zhuguocheng29.cn). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
     <lastBuildDate>Tue, 08 Aug 2017 13:56:16 +0800</lastBuildDate>
     
-	<atom:link href="https://zhuguocheng29.github.io/tags/leetcode-%E5%88%86%E6%B2%BB/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="http://zhuguocheng29.github.io/tags/leetcode-%E5%88%86%E6%B2%BB/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Unique Binary Search Trees II</title>
-      <link>https://zhuguocheng29.github.io/2017/08/08/unique-binary-search-trees-ii/</link>
+      <link>http://zhuguocheng29.github.io/2017/08/08/unique-binary-search-trees-ii/</link>
       <pubDate>Tue, 08 Aug 2017 13:56:16 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/2017/08/08/unique-binary-search-trees-ii/</guid>
+      <guid>http://zhuguocheng29.github.io/2017/08/08/unique-binary-search-trees-ii/</guid>
       <description>&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>LeetCode Longest Substring with At Least K Repeating Characters</title>
-      <link>https://zhuguocheng29.github.io/2017/06/27/leetcode-longest-substring-with-at-least-k-repeating-characters/</link>
+      <link>http://zhuguocheng29.github.io/2017/06/27/leetcode-longest-substring-with-at-least-k-repeating-characters/</link>
       <pubDate>Tue, 27 Jun 2017 15:17:32 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/2017/06/27/leetcode-longest-substring-with-at-least-k-repeating-characters/</guid>
+      <guid>http://zhuguocheng29.github.io/2017/06/27/leetcode-longest-substring-with-at-least-k-repeating-characters/</guid>
       <description>&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
