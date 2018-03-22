@@ -1,0 +1,1213 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>深度学习--递归神经网络 &middot; 好好学习，天天向上</title>
+    <meta name="generator" content="Hugo 0.21" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="一只会Think的Zhu">
+    
+      <meta name="description" content="递归神经网络-RNN">
+    
+    
+    <link rel="canonical" href="https://zhuguocheng29.github.io/2018/02/14/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0--%E9%80%92%E5%BD%92%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/"/>
+    <link rel="icon" href="https://zhuguocheng29.github.io/favicon.ico">
+    <link rel="apple-touch-icon" href="https://zhuguocheng29.github.io/apple-touch-icon.png"/>
+    <link rel="stylesheet" href="https://zhuguocheng29.github.io/css/style.css">
+    <link rel="stylesheet" href="https://zhuguocheng29.github.io/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://zhuguocheng29.github.io/css/monokai.css">
+    <link rel="stylesheet" href="https://zhuguocheng29.github.io/fancybox/jquery.fancybox.css">
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <meta property="og:title" content="深度学习--递归神经网络" />
+<meta property="og:description" content="递归神经网络-RNN" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://zhuguocheng29.github.io/2018/02/14/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0--%E9%80%92%E5%BD%92%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/" />
+
+
+
+<meta property="article:published_time" content="2018-02-14T20:31:33&#43;08:00"/>
+<meta property="article:modified_time" content="2018-02-14T20:31:33&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+<meta itemprop="name" content="深度学习--递归神经网络">
+<meta itemprop="description" content="递归神经网络-RNN">
+
+
+<meta itemprop="dateModified" content="2018-02-14T20:31:33&#43;08:00" />
+<meta itemprop="wordCount" content="3924">
+
+
+
+<meta itemprop="keywords" content="2016,2017年10月,2017年11月,2017年12月,2017年6月,2017年7月,2017年8月,2017年9月,2018年2月,2018年3月,cdh,elasticsearch,hbase,hugo,java,leetcode,leetcode-分治,leetcode-动态规划,leetcode-贪心,linux,markdown,mongodb,neo4j,oceanbase,tensorflow,vim,操作系统,机器学习,深度学习,生活随记,算法,算法证明," />
+
+    
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:text:title" content="深度学习--递归神经网络"/>
+<meta name="twitter:title" content="深度学习--递归神经网络"/>
+<meta name="twitter:description" content="递归神经网络-RNN"/>
+
+
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<div class="container">
+
+
+<div id="container">
+	<header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="https://zhuguocheng29.github.io/" id="logo">
+          
+          <i class="logo" style="background-image: url('https://zhuguocheng29.github.io/css/images/logo.png')"></i>
+          
+          <span class="site-title">好好学习，天天向上</span>
+      </a>
+      <nav id="main-nav">
+          
+          
+          <a class="main-nav-link" href="https://zhuguocheng29.github.io/">主页</a>
+          
+          
+          
+          <a class="main-nav-link" href="https://zhuguocheng29.github.io/categories/">分类</a>
+          
+          
+          
+          <a class="main-nav-link" href="https://zhuguocheng29.github.io/tags/">标签</a>
+          
+          
+
+          
+          <a class="main-nav-link" href="/about/">关于作者</a>
+          
+
+          
+          
+          
+          
+          
+          
+          
+      </nav>
+        <nav id="sub-nav">
+          <div class="profile" id="profile-nav">
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="https://zhuguocheng29.github.io/css/images/avatar.png"><i class="fa fa-caret-down"></i></a>
+          </div>
+        </nav>
+        <div id="search-form-wrap">
+          <form action="http://baidu.com" method="get" accept-charset="UTF-8" class="search-form">
+              <input type="search" name="q" class="search-form-input" placeholder="Search">
+              <button type="submit" class="search-form-submit">
+              </button>
+              <input type="hidden" name="sitesearch" value="https://zhuguocheng29.github.io/" />
+         </form>
+        </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tbody>
+          <tr>
+          
+          
+          <td><a class="main-nav-link" href="https://zhuguocheng29.github.io/">主页</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="https://zhuguocheng29.github.io/categories/">分类</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="https://zhuguocheng29.github.io/tags/">标签</a></td>
+          
+          
+
+          
+          <td><a class="main-nav-link" href="/about/">关于作者</a></td>
+          
+
+          
+          
+          
+          
+          
+          
+          
+          <td>
+          <form action="http://baidu.com" method="get" accept-charset="UTF-8" class="search-form">
+          <input type="search" name="q" class="search-form-input" placeholder="Search">
+          <input type="hidden" name="sitesearch" value="https://zhuguocheng29.github.io/" />
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</header>
+
+   	
+   	<div class="outer">
+   	
+    	<aside id="profile">
+  <div class="inner profile-inner">
+    <div class="base-info profile-block">
+      
+      <img id="avatar" src="https://www.gravatar.com/avatar/a37f6cb569a7c36f8e0c32a4dc9f81f2?s=100&d=identicon"/>
+      
+      <h2 id="name">一只会Think的Zhu</h2>
+      <h3 id="title">Blogger - Programmer - Engineer</h3>
+      <span id="location"><i class="fa fa-map-marker"></i>China</span>
+      
+          <a id="follow" href="https://github.com/zhuguocheng29">
+              关注
+          </a>
+      
+    </div>
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        109
+        <span>文章</span>
+      </div>
+      <div class="article-info-block">
+        
+          22
+        
+        <span>
+            标签
+        </span>
+      </div>
+    </div>
+    <div class="profile-block social-links">
+      <table>
+        <tr>
+          
+<td><a href="//github.com/zhuguocheng29" target="_blank" title="GitHub"><i class="fa fa-github"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//weibo.com/u/2596645693?refer_flag=1001030101_&is_all=1" target="_blank" title="Weibo"><i class="fa fa-weibo"></i></a></td>
+
+          <td><a href="https://zhuguocheng29.github.io/index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</aside>
+
+    
+
+    <section id="main">
+    
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+
+        <header class="article-header">
+    <a href="https://zhuguocheng29.github.io/2018/02/14/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0--%E9%80%92%E5%BD%92%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/">
+    <h1 class="article-title" itemprop="name">
+        深度学习--递归神经网络
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2018-02-14 20:31:33 &#43;0800 CST" itemprop="datePublished">2018-02-14</time>
+            &middot;
+            3924
+            words
+            &middot;
+            8
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://zhuguocheng29.github.io/categories/2018%E5%B9%B42%E6%9C%88">2018年2月</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://zhuguocheng29.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0">深度学习</a>
+                
+                
+            </div>
+            
+        
+		
+		
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p></p>
+
+<h2 id="递归神经网络">递归神经网络</h2>
+
+<h3 id="递归神经网络-rnn简介">递归神经网络-RNN简介</h3>
+
+<p><strong>循环神经网络与递归神经网络都叫RNN，它们有什么区别呢？</strong></p>
+
+<p>一般来说，神经网络的输入层单元个数是固定的，所以一般用<strong>循环</strong>或者<strong>递归</strong>的方式来<strong>处理长度可变的输入</strong></p>
+
+<p><strong>循环神经网络：</strong></p>
+
+<p>通过将长度不定的输入分割为等长度的小块，然后再依次的输入到网络中，从而实现了神经网络对变长输入的处理</p>
+
+<p><strong>递归神经网络：</strong></p>
+
+<p>当面对按照<strong>树/图结构</strong>处理信息更有效的任务时，递归神经网络通常会获得不错的结果。递归神经网络把一个树/图结构信息编码为一个向量，即把信息映射到一个语义向量空间中。这个语义向量空间满足某种性质，比如语义相似的向量距离更近。如下图，递归神经网络将所有的词、句都映射到一个2维向量空间中，也可以是多维空间。句子『the country of my birth』和句子『the place where I was born』的意思是非常接近的，所以表示它们的两个向量在向量空间中的距离很近。</p>
+
+<p><strong>递归神经网络</strong>是一种表示学习，它可以将词、句、段、篇按照他们的语义映射到同一个向量空间中，也就是把可组合（树/图结构）的信息表示为一个个有意义的向量。</p>
+
+<p><img src="/post/RNN_LSTM/15.png" center="center"/></p>
+
+<p>递归神经网络相比较与循环神经网络其具有更为强大的表示能力，但是在实际应用中并不太流行。其中一个主要原因是，递归神经网络的输入是树/图结构，而这种结构需要花费很多人工去标注。想象一下，如果我们用循环神经网络处理句子，那么我们可以直接把句子作为输入。然而，如果我们用递归神经网络处理句子，我们就必须把每个句子标注为语法解析树的形式，这无疑要花费非常大的精力。很多时候，相对于递归神经网络能够带来的性能提升，这个投入是不太划算的。</p>
+
+<h3 id="递归神经网络-rnn训练算法框架">递归神经网络-RNN训练算法框架</h3>
+
+<p><strong>以处理树型信息为例进行介绍</strong></p>
+
+<h4 id="递归神经网络的前向计算">递归神经网络的前向计算</h4>
+
+<p><strong>递归神经网络</strong>的输入是两个子节点（也可以是多个），输出就是将这两个子节点编码后产生的父节点，父节点的维度和每个子节点是相同的。</p>
+
+<p>如下图所示，其中，\(c_1\)和\(c_2\)分别是表示两个子节点的向量,即子节点的输出向量。\(p\)是表示父节点的向量，即父节点的输出向量。子节点和父节点组成一个全连接神经网络。我们用矩阵\(W\)表示这些连接上的权重，它的维度将是\(d\times 2d\)，其中，\(d\)表示每个节点的维度。父节点的计算公式可以写成,其中tanh是激活函数（也可以用其他的激活函数），\(b\)是偏置项，也是一个维度为d的向量。<strong>注意：递归神经网络的权重\(W\)和偏置项\(b\)在所有的节点都是共享的</strong></p>
+
+<p>$$
+\mathbf{p} = tanh(W\begin{bmatrix}\mathbf{c}_1\\\mathbf{c}_2\end{bmatrix}+\mathbf{b})\qquad
+$$</p>
+
+<p>然后，把产生的父节点的向量和其他子节点的向量再次作为网络的输入，再次产生它们的父节点。如此递归下去，直至整棵树处理完毕。最终，<strong>将得到的根节点的向量可以认为它是对整棵树的表示</strong>，从而实现了把树映射为一个向量，如下图，最终得到向量\(P_3\).</p>
+
+<p><img src="/post/RNN_LSTM/16.png" center="center"/></p>
+
+<p><strong>注意：递归神经网络在输入的过程中需要根据输入的树结构依次输入每个子节点。</strong></p>
+
+<h4 id="递归神经网络的反向误差计算">递归神经网络的反向误差计算</h4>
+
+<p><strong>递归神经网络的训练方法和循环神经网络类似，不同之处在于，递归神经网络需要将残差\(\delta\)从根节点反向传播到各个子节点，而循环神经网络将残差\(\delta\)从当前时刻\(t_k\)反向传播到初始时刻\(t_1\)</strong></p>
+
+<h5 id="误差项">误差项</h5>
+
+<p>将误差从父节点传递到子节点，如下图：</p>
+
+<p><img src="/post/RNN_LSTM/17.png" center="center"/></p>
+
+<p>定义\(\delta_p\)将误差函数E相对于父节点p的加权输入\(net_p\)的导数，即：</p>
+
+<p>$$
+\delta_p\overset{def}{=}\frac{\partial{E}}{\partial{\mathbf{net}_p}}
+$$</p>
+
+<p>设\(net_p\)是父节点的<strong>加权输入</strong>，则，其中\(net_p,c_1,c_2\)都是向量，而\(W\)是矩阵</p>
+
+<p>$$
+\mathbf{net}_p=W\begin{bmatrix}\mathbf{c}_1\\\\mathbf{c}_2\end{bmatrix}+\mathbf{b}
+$$</p>
+
+<p>展开如下图,其中：</p>
+
+<ul>
+<li>\(p_i\)表示父节点p的第i个分量</li>
+<li>\(c_{1i}\)表示\(c_1\)子节点的第i个分量</li>
+<li>\(c_{2i}\)表示\(c_2\)子节点的第i个分量</li>
+<li>\(w_{p_{i}c_{jk}}\)表示子节点\(c_j\)的第k个分量到父节点p的第i个分量的权重</li>
+</ul>
+
+<p>$$
+\begin{align}
+\begin{bmatrix}
+net_{p_1}\\<br />
+net_{p_2}\\<br />
+&hellip;\\<br />
+net_{p_n}
+\end{bmatrix}&amp;=
+\begin{bmatrix}
+w_{p_1c_{11}}&amp;w_{p_1c_{12}}&amp;&hellip;&amp;w_{p_1c_{1n}}&amp;w_{p_1c_{21}}&amp;w_{p_1c_{22}}&amp;&hellip;&amp;w_{p_1c_{2n}}\\<br />
+w_{p_2c_{11}}&amp;w_{p_2c_{12}}&amp;&hellip;&amp;w_{p_2c_{1n}}&amp;w_{p_2c_{21}}&amp;w_{p_2c_{22}}&amp;&hellip;&amp;w_{p_2c_{2n}}\\<br />
+&hellip;\\<br />
+w_{p_nc_{11}}&amp;w_{p_nc_{12}}&amp;&hellip;&amp;w_{p_nc_{1n}}&amp;w_{p_nc_{21}}&amp;w_{p_nc_{22}}&amp;&hellip;&amp;w_{p_nc_{2n}}\\<br />
+\end{bmatrix}
+\begin{bmatrix}
+c_{11}\\<br />
+c_{12}\\<br />
+&hellip;\\<br />
+c_{1n}\\<br />
+c_{21}\\<br />
+c_{22}\\<br />
+&hellip;\\<br />
+c_{2n}
+\end{bmatrix}\\<br />
+&amp;+\begin{bmatrix}
+b_1\\<br />
+b_2\\<br />
+&hellip;\\<br />
+b_n\\<br />
+\end{bmatrix}
+\end{align}
+$$</p>
+
+<p>根据展开的公式，可以发现，对于子节点\(c_{jk}\)来说，它会影响父节点所有的分量，因此求误差函数\(E\)对\(c_{jk}\)的导数时，必须用到全导数公式，如下,<strong>注意：\(\frac{\partial{E}}{\partial{c_{jk}}}\)是一个值</strong></p>
+
+<p>$$
+\begin{align}
+\frac{\partial{E}}{\partial{c_{jk}}}&amp;=\sum_i{\frac{\partial{E}}{\partial{net_{p_i}}}}\frac{\partial{net_{p_i}}}{\partial{c_{jk}}}\\<br />
+&amp;=\sum_i{\delta_{p_i}}w_{p_ic_{jk}}
+\end{align}
+$$</p>
+
+<p>再把上式变为矩阵形式，从而得到一个<strong>向量化表达</strong>，这块自己可以看一下，个人觉得实际上就是将<strong>数转换为向量</strong></p>
+
+<p>$$
+\begin{align}
+\frac{\partial{E}}{\partial{\mathbf{c}_j}}&amp;=U_j\delta_p
+\end{align}
+$$</p>
+
+<p>其中矩阵\(U_j\)是从矩阵\(W\)中提取部分元素组成的矩阵，其单元为：</p>
+
+<p>$$
+u_{j_{ik}}=w_{p_kc_{ji}}
+$$</p>
+
+<p>更加直观的方式如下图：</p>
+
+<p><img src="/post/RNN_LSTM/17.png" center="center"/></p>
+
+<p>这个自己可以看一下，子矩阵\(W_1\)和\(W_2\)分别对应子节点\(c_1\)和\(c_2\)到父节点\(p\)的权重，矩阵\(U_j\)为：</p>
+
+<p>$$
+U_j=W_j^T
+$$</p>
+
+<p>现在设\(net_c{j}\)是子节点\(c_j\)的加权输入，\(c_j\)是输出向量，f是子节点c的激活函数，则：</p>
+
+<p>$$
+\begin{align}
+\mathbf{c}_j=f(\mathbf{net}_{c_j})\\<br />
+\end{align}
+$$</p>
+
+<p>从而得到</p>
+
+<p>$$
+\begin{align}
+\delta_{c_j}&amp;=\frac{\partial{E}}{\partial{\mathbf{net}_{c_j}}}\\<br />
+&amp;=\frac{\partial{E}}{\partial{\mathbf{c}_j}}\frac{\partial{\mathbf{c}_j}}{\partial{\mathbf{net}_{c_j}}}\\<br />
+&amp;=W_j^T\delta_p\circ f&rsquo;(\mathbf{net}_{c_j})
+\end{align}
+$$</p>
+
+<p>再将不同子节点\(c_j\)对应的误差项\(\delta_{c_j}\)连接成一个向量\(\delta_c=\begin{bmatrix}\delta_{c_1}\\\ \delta_{c_2}\end{bmatrix}\)，从而上式又可以写成,<strong>注意： \(net_c\)也是两个子节点的加权输入\(\mathbf{net}_{c_1}\)和\(\mathbf{net}_{c_2}\)连在一起的向量</strong>:</p>
+
+<p>$$
+\delta_c=W^T\delta_p\circ f&rsquo;(\mathbf{net}_c)\qquad
+$$</p>
+
+<p>最后再逐层传递，如下图：</p>
+
+<p><img src="/post/RNN_LSTM/19.png" center="center"/></p>
+
+<p>再反复利用上式，在已知\(\delta_p^{(3)}\)的情况下，可以传递算出\(\delta_p^{(1)}\)。**注意:\(\delta^{(2)}=\begin{bmatrix}\delta_c^{(2)}\\\ \delta_p^{(2)}\end{bmatrix}\)，\([\delta^{(2)}]_p\)表示向量\(\delta^{(2)}\)属于节点p的部分 **</p>
+
+<p>$$
+\begin{align}
+\delta^{(2)}&amp;=W^T\delta_p^{(3)}\circ f&rsquo;(\mathbf{net}^{(2)})\\<br />
+\delta_p^{(2)}&amp;=[\delta^{(2)}]_p\\<br />
+\delta^{(1)}&amp;=W^T\delta_p^{(2)}\circ f&rsquo;(\mathbf{net}^{(1)})\\<br />
+\delta_p^{(1)}&amp;=[\delta^{(1)}]_p\\<br />
+\end{align}
+$$</p>
+
+<h4 id="权重梯度的计算">权重梯度的计算</h4>
+
+<p>根据加权输入的计算公式，其中\(\mathbf{net}_p^{(l)}\)表示第l层的父节点的加权输入，\(\mathbf{c}^{(l)}\)表示第l层的子节点，\(W\)是权重矩阵，\(b\)是偏置项</p>
+
+<p>$$
+\mathbf{net}_p^{(l)}=W\mathbf{c}^{(l)}+\mathbf{b}
+$$</p>
+
+<p>然后可以求得误差函数在第l层对权重的梯度：</p>
+
+<p>$$
+\begin{align}
+\frac{\partial{E}}{\partial{w_{ji}^{(l)}}}&amp;=\frac{\partial{E}}{\partial{\mathbf{net}_{p_j}^{(l)}}}\frac{\partial{\mathbf{net}_{p_j}^{(l)}}}{\partial{w_{ji}^{(l)}}}\\<br />
+&amp;=\delta_{p_j}^{(l)}c_i^{(l)}\\<br />
+\end{align}
+$$</p>
+
+<p>上式是针对一个权重项\(w_{ji}\)的公式，现在需要把它扩展为对所有的权重项的公式。我们可以把上式写成矩阵的形式（在下面的公式中，m=2n）：</p>
+
+<p>$$
+\begin{align}
+\frac{\partial{E}}{\partial{W^{(l)}}}&amp;=
+\begin{bmatrix}
+\frac{\partial{E}}{\partial{w_{11}^{(l)}}}&amp;
+\frac{\partial{E}}{\partial{w_{12}^{(l)}}}&amp;
+&hellip;&amp;
+\frac{\partial{E}}{\partial{w_{1m}^{(l)}}}\\<br />
+\frac{\partial{E}}{\partial{w_{21}^{(l)}}}&amp;
+\frac{\partial{E}}{\partial{w_{22}^{(l)}}}&amp;
+&hellip;&amp;
+\frac{\partial{E}}{\partial{w_{2m}^{(l)}}}\\<br />
+&hellip;\\\<br />
+\frac{\partial{E}}{\partial{w_{n1}^{(l)}}}&amp;
+\frac{\partial{E}}{\partial{w_{n2}^{(l)}}}&amp;
+&hellip;&amp;
+\frac{\partial{E}}{\partial{w_{nm}^{(l)}}}\\<br />
+\end{bmatrix}\\<br />
+&amp;=
+\begin{bmatrix}
+\delta_{p_1}^{(l)}c_1^l&amp;\delta_{p_1}^{(l)}c_2^l&amp;&hellip;&amp;\delta_{p_1}^lc_m^{(l)}\\<br />
+\delta_{p_2}^{(l)}c_1^l&amp;\delta_{p_2}^{(l)}c_2^l&amp;&hellip;&amp;\delta_{p_2}^lc_m^{(l)}\\<br />
+&hellip;\\\<br />
+\delta_{p_n}^{(l)}c_1^l&amp;\delta_{p_n}^{(l)}lc_2^l&amp;&hellip;&amp;\delta_{p_n}^lc_m^{(l)}\\<br />
+\end{bmatrix}<br />
+&amp;=\delta^{{(l)}}(\mathbf{c}^{(l)})^T\qquad
+\end{align}
+$$</p>
+
+<p><strong>由于权重\(W\)是在所有层共享的，因此递归神经网络最终的权重梯度是各个层权重梯度之和。即:</strong></p>
+
+<p>$$
+\frac{\partial{E}}{\partial{W}}=\sum_l\frac{\partial{E}}{\partial{W^{(l)}}}\qquad
+$$</p>
+
+<p>偏置\(b\)的偏置项之和方法与求权重梯度一样，本文不再继续推导</p>
+
+<h4 id="权重更新">权重更新</h4>
+
+<p>利用梯度下降优化算法，权重的更新公式和偏置项的更新公式如下，其中\(\eta\)是学习速率常数</p>
+
+<p>$$
+W\gets W + \eta\frac{\partial{E}}{\partial{W}}\\<br />
+\mathbf{b}\gets \mathbf{b} + \eta\frac{\partial{E}}{\partial{\mathbf{b}}}
+$$</p>
+
+<h2 id="递归神经网络的应用">递归神经网络的应用</h2>
+
+<p>递归神经网络完成句子的语法分析并产生一个语法解析树，如下图所示：</p>
+
+<p><img src="/post/RNN_LSTM/20.png" center="center"/></p>
+
+<p>将一句话输入到神经网络中，然后神经网络返回一个解析树。为了做到这一点，我们需要给神经网络再加上一层，负责打分。分数越高，说明两个子节点结合更加紧密，分数越低，说明两个子节点结合更松散。如下图所示：</p>
+
+<p><img src="/post/RNN_LSTM/21.png" center="center"/></p>
+
+<p>一旦这个打分函数训练好了（也就是矩阵U的各项值变为合适的值），我们就可以利用<strong>贪心算法</strong>来实现句子的解析。举例如下：</p>
+
+<ul>
+<li>先将词按照顺序两两输入神经网络，得到第一组打分</li>
+</ul>
+
+<p><img src="/post/RNN_LSTM/22.png" center="center"/></p>
+
+<ul>
+<li>现在分数最高的是第一组，The cat，说明它们的结合是最紧密的。这样，我们可以先将它们组合为一个节点。然后，再次两两计算相邻子节点的打分</li>
+</ul>
+
+<p><img src="/post/RNN_LSTM/23.png" center="center"/></p>
+
+<ul>
+<li>现在，分数最高的是最后一组，the mat。于是，我们将它们组合为一个节点，再两两计算相邻节点的打分</li>
+</ul>
+
+<p><img src="/post/RNN_LSTM/24.png" center="center"/></p>
+
+<ul>
+<li>这时，我们发现最高的分数是on the mat，把它们组合为一个节点，继续两两计算相邻节点的打分&hellip;&hellip;最终，我们就能够得到整个解析树</li>
+</ul>
+
+<p><img src="/post/RNN_LSTM/25.png" center="center"/></p>
+
+<p>对于打分函数score，需要定义一个目标函数。这里使用Max-Margin目标函数，定义如下，下式中，\(x_i，y_i\)分别表示是第i个训练样本的输入和标签，<strong>注意：标签\(y_i\)是一个解析树</strong>，\(s(x_i,y_i)\)是打分函数，是对第i个训练样本的打分。因为训练样本的标签肯定是正确的，我们希望s对它的打分越高越好，即\(s(x_i,y_i)\)分数越高越好。\(A(x_1)\)是所有可能的解析树的集合，\(s(x_i,y)\)是对某个可能的解析树y的打分。\(\Delta(y,y_i)\)是对错误的惩罚，也就是说，如果某个解析树\(y\)和标签\(y_i\)是一样的，那么\(\Delta(y,y_i)\)为0，如果网络的输出错的越离谱，那么\(\Delta(y,y_i)\)的值就越大。\(max(s(x_i,y)+\Delta(y,y_i))\)表示在所有解析树里的最高分。\(\Delta(y,y_i)\)相当于Margin，即虽然希望打分函数s对正确的树打分比对错误的树打分高，但也不要高过Margin的值。</p>
+
+<p>$$
+J(\theta)=max(0, \sum_i\underset{y\in A(x_i)}{max}(s(x_i,y)+\Delta(y,y_i))-s(x_i,y_i))
+$$</p>
+
+<p>最后优化\(\theta\)，使目标函数取最小值，即</p>
+
+<p>$$
+\theta=\underset{\theta}{argmin}J(\theta)
+$$</p>
+
+<p>下式是对惩罚函数\(\Delta(y,y_i)\)的定义，\(N(y)\)是树y节点的集合；subTree(d)是以d为节点的子树。</p>
+
+<p>$$
+\Delta(y,y_i)=k\sum_{d\in N(y)}\mathbf{1}{{subTree(d)\notin y_i}}
+$$</p>
+
+<p>上式的含义是：如果以d为节点的子树没有出现在标签\(y_i\)中，那么函数值+1。最终，惩罚函数的值，是树y中没有出现在树中的子树的个数，再乘上一个系数k。其实也就是关于两棵树差异的一个度量。</p>
+
+<p>\(s(x,y)\)是对一个样本最终的打分，它是对树y每个节点打分的总和：</p>
+
+<p>$$
+s(x,y)=\sum_{n\in nodes(y)}s_n
+$$</p>
+
+<blockquote>
+<p>本文主要参考了<a href="https://zybuluo.com/hanbingtao/note/626300">零基础入门深度学习-递归神经网络</a></p>
+</blockquote>
+        </div>
+        <footer class="article-footer">
+    <a data-url="https://zhuguocheng29.github.io/2018/02/14/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0--%E9%80%92%E5%BD%92%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/" data-id="b2fe3bd9331d41efb3bd77e7710d1058" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+	
+    
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+							'<a href="http://v.t.sina.com.cn/share/share.php?title=' + encodedUrl + '&content=' + encodedUrl + '" class="fa fa-weibo article-share-facebook" target="_blank" title="Weibo"></a>',					
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);	
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+
+    
+<nav id="article-nav">
+    
+    <a href="https://zhuguocheng29.github.io/2018/02/12/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0--lstm/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          上一篇
+      </strong>
+      <div class="article-nav-title">深度学习--LSTM</div>
+    </a>
+    
+
+    
+    <a href="https://zhuguocheng29.github.io/2018/02/19/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0--%E6%96%B0%E5%9E%8B%E7%BD%91%E7%BB%9C/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          下一篇
+      </strong>
+      <div class="article-nav-title">深度学习--新型网络</div>
+    </a>
+    
+</nav>
+
+
+</article>
+
+
+
+
+
+
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zMjQ2Ni85MDI3">
+<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+</script>
+<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+
+
+
+    </section>
+
+   	
+    	<aside id="sidebar">
+    
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        最近
+    </h3>
+    <div class="widget">
+        <ul id="recent-post">
+					<hr style="margin-right:90px;height:1px;border:0px;background-color:#D5D5D5;solid #eceff2;"/>
+
+            
+            <li>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category" >
+                        
+                        <a class="article-category-link" style="font-size:14px;" href="https://zhuguocheng29.github.io/categories/2018%E5%B9%B43%E6%9C%88">
+                        2018年3月
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://zhuguocheng29.github.io/2018/03/14/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--ensemble/" class="title">机器学习--Ensemble</a></p>
+                    <p class="item-date"  style="margin-top:3px">
+                        <time datetime="2018-03-14 20:36:46 &#43;0800 CST" itemprop="datePublished">2018-03-14</time>
+                    </p>
+                </div>
+            </li>
+			<hr style="margin-right:90px;height:1px;border:0px;background-color:#D5D5D5;solid #eceff2;"/>
+            
+            <li>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category" >
+                        
+                        <a class="article-category-link" style="font-size:14px;" href="https://zhuguocheng29.github.io/categories/2018%E5%B9%B43%E6%9C%88">
+                        2018年3月
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://zhuguocheng29.github.io/2018/03/09/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E6%9C%89%E7%BB%93%E6%9E%84%E7%9A%84%E5%AD%A6%E4%B9%A0/" class="title">机器学习--有结构的学习</a></p>
+                    <p class="item-date"  style="margin-top:3px">
+                        <time datetime="2018-03-09 22:09:28 &#43;0800 CST" itemprop="datePublished">2018-03-09</time>
+                    </p>
+                </div>
+            </li>
+			<hr style="margin-right:90px;height:1px;border:0px;background-color:#D5D5D5;solid #eceff2;"/>
+            
+            <li>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category" >
+                        
+                        <a class="article-category-link" style="font-size:14px;" href="https://zhuguocheng29.github.io/categories/2018%E5%B9%B43%E6%9C%88">
+                        2018年3月
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://zhuguocheng29.github.io/2018/03/09/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--svm/" class="title">机器学习--SVM</a></p>
+                    <p class="item-date"  style="margin-top:3px">
+                        <time datetime="2018-03-09 14:57:03 &#43;0800 CST" itemprop="datePublished">2018-03-09</time>
+                    </p>
+                </div>
+            </li>
+			<hr style="margin-right:90px;height:1px;border:0px;background-color:#D5D5D5;solid #eceff2;"/>
+            
+            <li>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category" >
+                        
+                        <a class="article-category-link" style="font-size:14px;" href="https://zhuguocheng29.github.io/categories/2018%E5%B9%B43%E6%9C%88">
+                        2018年3月
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://zhuguocheng29.github.io/2018/03/08/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E8%BD%AC%E7%A7%BB%E5%AD%A6%E4%B9%A0/" class="title">机器学习--转移学习</a></p>
+                    <p class="item-date"  style="margin-top:3px">
+                        <time datetime="2018-03-08 22:04:39 &#43;0800 CST" itemprop="datePublished">2018-03-08</time>
+                    </p>
+                </div>
+            </li>
+			<hr style="margin-right:90px;height:1px;border:0px;background-color:#D5D5D5;solid #eceff2;"/>
+            
+            <li>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category" >
+                        
+                        <a class="article-category-link" style="font-size:14px;" href="https://zhuguocheng29.github.io/categories/2018%E5%B9%B43%E6%9C%88">
+                        2018年3月
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://zhuguocheng29.github.io/2018/03/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A02%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B/" class="title">机器学习--无监督学习2(生成模型)</a></p>
+                    <p class="item-date"  style="margin-top:3px">
+                        <time datetime="2018-03-07 15:37:04 &#43;0800 CST" itemprop="datePublished">2018-03-07</time>
+                    </p>
+                </div>
+            </li>
+			<hr style="margin-right:90px;height:1px;border:0px;background-color:#D5D5D5;solid #eceff2;"/>
+            
+
+        </ul>
+    </div>
+</div>
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/categories/2016">
+                    2016
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/categories/2017%E5%B9%B410%E6%9C%88">
+                    2017年10月
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/categories/2017%E5%B9%B411%E6%9C%88">
+                    2017年11月
+                </a>
+                <span class="category-list-count">4</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/categories/2017%E5%B9%B412%E6%9C%88">
+                    2017年12月
+                </a>
+                <span class="category-list-count">8</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/categories/2017%E5%B9%B46%E6%9C%88">
+                    2017年6月
+                </a>
+                <span class="category-list-count">28</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/categories/2017%E5%B9%B47%E6%9C%88">
+                    2017年7月
+                </a>
+                <span class="category-list-count">30</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/categories/2017%E5%B9%B48%E6%9C%88">
+                    2017年8月
+                </a>
+                <span class="category-list-count">18</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/categories/2017%E5%B9%B49%E6%9C%88">
+                    2017年9月
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/categories/2018%E5%B9%B42%E6%9C%88">
+                    2018年2月
+                </a>
+                <span class="category-list-count">5</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/categories/2018%E5%B9%B43%E6%9C%88">
+                    2018年3月
+                </a>
+                <span class="category-list-count">8</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        标签
+    </h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/cdh">
+                    cdh
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/elasticsearch">
+                    elasticsearch
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/hbase">
+                    hbase
+                </a>
+                <span class="category-list-count">7</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/hugo">
+                    hugo
+                </a>
+                <span class="category-list-count">5</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/java">
+                    java
+                </a>
+                <span class="category-list-count">4</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/leetcode">
+                    leetcode
+                </a>
+                <span class="category-list-count">36</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/leetcode-%E5%88%86%E6%B2%BB">
+                    leetcode-分治
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/leetcode-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92">
+                    leetcode-动态规划
+                </a>
+                <span class="category-list-count">8</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/leetcode-%E8%B4%AA%E5%BF%83">
+                    leetcode-贪心
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/linux">
+                    linux
+                </a>
+                <span class="category-list-count">5</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/markdown">
+                    markdown
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/mongodb">
+                    mongodb
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/neo4j">
+                    neo4j
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/oceanbase">
+                    oceanbase
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/tensorflow">
+                    tensorflow
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/vim">
+                    vim
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F">
+                    操作系统
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0">
+                    机器学习
+                </a>
+                <span class="category-list-count">8</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0">
+                    深度学习
+                </a>
+                <span class="category-list-count">8</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0">
+                    生活随记
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/%E7%AE%97%E6%B3%95">
+                    算法
+                </a>
+                <span class="category-list-count">9</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/%E7%AE%97%E6%B3%95%E8%AF%81%E6%98%8E">
+                    算法证明
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+    
+
+
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+
+    
+	</div>
+</div>
+
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018
+      Powered by <a href="http://www.zhuguocheng29.cn">Zhuguocheng</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>.
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://zhuguocheng29.github.io/fancybox/jquery.fancybox.pack.js"></script>
+<script src="https://zhuguocheng29.github.io/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+</body>
+</html>
