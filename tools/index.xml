@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tools on 好好学习，天天向上</title>
+    <link>http://www.zhuguocheng29.cn/tools/</link>
+    <description>Recent content in Tools on 好好学习，天天向上</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Powered by [Zhuguocheng](http://www.zhuguocheng29.cn). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
+    
+	<atom:link href="http://www.zhuguocheng29.cn/tools/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+  </channel>
+</rss>

@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>未排序正数数组中累加和为给定值的最长子数组长度 &middot; 好好学习，天天向上</title>
+    <meta name="generator" content="Hugo 0.21" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="一只会Think的Zhu">
+    
+      <meta name="description" content="未排序正数数组中累加和为给定值的最长子数组长度">
+    
+    
+    <link rel="canonical" href="http://www.zhuguocheng29.cn/2017/07/12/%E6%9C%AA%E6%8E%92%E5%BA%8F%E6%AD%A3%E6%95%B0%E6%95%B0%E7%BB%84%E4%B8%AD%E7%B4%AF%E5%8A%A0%E5%92%8C%E4%B8%BA%E7%BB%99%E5%AE%9A%E5%80%BC%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E6%95%B0%E7%BB%84%E9%95%BF%E5%BA%A6/"/>
+    <link rel="icon" href="http://www.zhuguocheng29.cn/favicon.ico">
+    <link rel="apple-touch-icon" href="http://www.zhuguocheng29.cn/apple-touch-icon.png"/>
+    <link rel="stylesheet" href="http://www.zhuguocheng29.cn/css/style.css">
+    <link rel="stylesheet" href="http://www.zhuguocheng29.cn/css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://www.zhuguocheng29.cn/css/monokai.css">
+    <link rel="stylesheet" href="http://www.zhuguocheng29.cn/fancybox/jquery.fancybox.css">
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <meta property="og:title" content="未排序正数数组中累加和为给定值的最长子数组长度" />
+<meta property="og:description" content="未排序正数数组中累加和为给定值的最长子数组长度" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="http://www.zhuguocheng29.cn/2017/07/12/%E6%9C%AA%E6%8E%92%E5%BA%8F%E6%AD%A3%E6%95%B0%E6%95%B0%E7%BB%84%E4%B8%AD%E7%B4%AF%E5%8A%A0%E5%92%8C%E4%B8%BA%E7%BB%99%E5%AE%9A%E5%80%BC%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E6%95%B0%E7%BB%84%E9%95%BF%E5%BA%A6/" />
+
+
+
+<meta property="article:published_time" content="2017-07-12T14:16:51&#43;08:00"/>
+<meta property="article:modified_time" content="2017-07-12T14:16:51&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+<meta itemprop="name" content="未排序正数数组中累加和为给定值的最长子数组长度">
+<meta itemprop="description" content="未排序正数数组中累加和为给定值的最长子数组长度">
+
+
+<meta itemprop="dateModified" content="2017-07-12T14:16:51&#43;08:00" />
+<meta itemprop="wordCount" content="286">
+
+
+
+<meta itemprop="keywords" content="2016,2017年10月,2017年11月,2017年12月,2017年6月,2017年7月,2017年8月,2017年9月,2018年2月,2018年3月,cdh,elasticsearch,hbase,hugo,java,leetcode,leetcode-分治,leetcode-动态规划,leetcode-贪心,linux,markdown,mongodb,neo4j,oceanbase,tensorflow,vim,操作系统,机器学习,深度学习,生活随记,算法,算法证明," />
+
+    
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:text:title" content="未排序正数数组中累加和为给定值的最长子数组长度"/>
+<meta name="twitter:title" content="未排序正数数组中累加和为给定值的最长子数组长度"/>
+<meta name="twitter:description" content="未排序正数数组中累加和为给定值的最长子数组长度"/>
+
+
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<div class="container">
+
+
+<div id="container">
+	<header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="http://www.zhuguocheng29.cn" id="logo">
+          
+          <i class="logo" style="background-image: url('http://www.zhuguocheng29.cn/css/images/logo.png')"></i>
+          
+          <span class="site-title">好好学习，天天向上</span>
+      </a>
+      <nav id="main-nav">
+          
+          
+          <a class="main-nav-link" href="http://www.zhuguocheng29.cn/">主页</a>
+          
+          
+          
+          <a class="main-nav-link" href="http://www.zhuguocheng29.cn/categories/">分类</a>
+          
+          
+          
+          <a class="main-nav-link" href="http://www.zhuguocheng29.cn/tags/">标签</a>
+          
+          
+
+          
+          <a class="main-nav-link" href="/about/">关于作者</a>
+          
+
+          
+          
+          
+          
+          
+          
+          
+      </nav>
+        <nav id="sub-nav">
+          <div class="profile" id="profile-nav">
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="http://www.zhuguocheng29.cn/css/images/avatar.png"><i class="fa fa-caret-down"></i></a>
+          </div>
+        </nav>
+        <div id="search-form-wrap">
+          <form action="http://baidu.com" method="get" accept-charset="UTF-8" class="search-form">
+              <input type="search" name="q" class="search-form-input" placeholder="Search">
+              <button type="submit" class="search-form-submit">
+              </button>
+              <input type="hidden" name="sitesearch" value="http://www.zhuguocheng29.cn" />
+         </form>
+        </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tbody>
+          <tr>
+          
+          
+          <td><a class="main-nav-link" href="http://www.zhuguocheng29.cn/">主页</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="http://www.zhuguocheng29.cn/categories/">分类</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="http://www.zhuguocheng29.cn/tags/">标签</a></td>
+          
+          
+
+          
+          <td><a class="main-nav-link" href="/about/">关于作者</a></td>
+          
+
+          
+          
+          
+          
+          
+          
+          
+          <td>
+          <form action="http://baidu.com" method="get" accept-charset="UTF-8" class="search-form">
+          <input type="search" name="q" class="search-form-input" placeholder="Search">
+          <input type="hidden" name="sitesearch" value="http://www.zhuguocheng29.cn" />
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</header>
+
+   	
+   	<div class="outer">
+   	
+    	<aside id="profile">
+  <div class="inner profile-inner">
+    <div class="base-info profile-block">
+      
+      <img id="avatar" src="https://www.gravatar.com/avatar/a37f6cb569a7c36f8e0c32a4dc9f81f2?s=100&d=identicon"/>
+      
+      <h2 id="name">一只会Think的Zhu</h2>
+      <h3 id="title">Blogger - Programmer - Engineer</h3>
+      <span id="location"><i class="fa fa-map-marker"></i>China</span>
+      
+          <a id="follow" href="https://github.com/zhuguocheng29">
+              关注
+          </a>
+      
+    </div>
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        109
+        <span>文章</span>
+      </div>
+      <div class="article-info-block">
+        
+          22
+        
+        <span>
+            标签
+        </span>
+      </div>
+    </div>
+    <div class="profile-block social-links">
+      <table>
+        <tr>
+          
+<td><a href="//github.com/zhuguocheng29" target="_blank" title="GitHub"><i class="fa fa-github"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//weibo.com/u/2596645693?refer_flag=1001030101_&is_all=1" target="_blank" title="Weibo"><i class="fa fa-weibo"></i></a></td>
+
+          <td><a href="http://www.zhuguocheng29.cn/index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</aside>
+
+    
+
+    <section id="main">
+    
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+
+        <header class="article-header">
+    <a href="http://www.zhuguocheng29.cn/2017/07/12/%E6%9C%AA%E6%8E%92%E5%BA%8F%E6%AD%A3%E6%95%B0%E6%95%B0%E7%BB%84%E4%B8%AD%E7%B4%AF%E5%8A%A0%E5%92%8C%E4%B8%BA%E7%BB%99%E5%AE%9A%E5%80%BC%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E6%95%B0%E7%BB%84%E9%95%BF%E5%BA%A6/">
+    <h1 class="article-title" itemprop="name">
+        未排序正数数组中累加和为给定值的最长子数组长度
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2017-07-12 14:16:51 &#43;0800 CST" itemprop="datePublished">2017-07-12</time>
+            &middot;
+            286
+            words
+            &middot;
+            1
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="http://www.zhuguocheng29.cn/categories/2017%E5%B9%B47%E6%9C%88">2017年7月</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="http://www.zhuguocheng29.cn/tags/%E7%AE%97%E6%B3%95">算法</a>
+                
+                
+            </div>
+            
+        
+		
+		
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p></p>
+
+<h2 id="题目">题目</h2>
+
+<p>问题： 给定一个数组 arr，该数组无序，但每个值均为正数，再给定一个正数 k。求 arr 的所有子数组中所有元素相加和为 k 的最长子数组长度。 例如，arr=[1,2,1,1,1]，k=3。 累加和为 3 的最长子数组为[1,1,1]，所以结果返回 3。</p>
+
+<p>要求： 时间复杂度 O(N)，额外空间复杂度 O(1)</p>
+
+<h2 id="思路">思路</h2>
+
+<p>设置<strong>两个变量left和right</strong>，代表arr[left&hellip;right]。sum表示arr[left..right]的和，len表示最长子数组长度。</p>
+
+<p>分三种情况判断，代码略：</p>
+
+<ol>
+<li>sum == k, 更新len, sum = sum-arr[left], left++</li>
+<li>sum &lt; k, sum = sum + arr[right]，right++, 同时要注意边界</li>
+<li>sum &gt; k, sum = sum - arr[left], left++</li>
+</ol>
+        </div>
+        <footer class="article-footer">
+    <a data-url="http://www.zhuguocheng29.cn/2017/07/12/%E6%9C%AA%E6%8E%92%E5%BA%8F%E6%AD%A3%E6%95%B0%E6%95%B0%E7%BB%84%E4%B8%AD%E7%B4%AF%E5%8A%A0%E5%92%8C%E4%B8%BA%E7%BB%99%E5%AE%9A%E5%80%BC%E7%9A%84%E6%9C%80%E9%95%BF%E5%AD%90%E6%95%B0%E7%BB%84%E9%95%BF%E5%BA%A6/" data-id="2fd599c768206df4fce3017ec90c6a95" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+	
+    
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+							'<a href="http://v.t.sina.com.cn/share/share.php?title=' + encodedUrl + '&content=' + encodedUrl + '" class="fa fa-weibo article-share-facebook" target="_blank" title="Weibo"></a>',					
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);	
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+
+    
+<nav id="article-nav">
+    
+    <a href="http://www.zhuguocheng29.cn/2017/07/11/%E6%89%93%E5%8D%B0%E4%BA%8C%E5%8F%89%E6%A0%91%E8%BE%B9%E7%95%8C%E8%8A%82%E7%82%B9/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          上一篇
+      </strong>
+      <div class="article-nav-title">打印二叉树边界节点</div>
+    </a>
+    
+
+    
+    <a href="http://www.zhuguocheng29.cn/2017/07/13/leetcode-populating-next-right-pointers-in-each-node/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          下一篇
+      </strong>
+      <div class="article-nav-title">LeetCode Populating Next Right Pointers in Each Node</div>
+    </a>
+    
+</nav>
+
+
+</article>
+
+
+
+
+
+
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zMjQ2Ni85MDI3">
+<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+</script>
+<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+
+
+
+    </section>
+
+   	
+    	<aside id="sidebar">
+    
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        最近
+    </h3>
+    <div class="widget">
+        <ul id="recent-post">
+					<hr style="margin-right:90px;height:1px;border:0px;background-color:#D5D5D5;solid #eceff2;"/>
+
+            
+            <li>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category" >
+                        
+                        <a class="article-category-link" style="font-size:14px;" href="http://www.zhuguocheng29.cn/categories/2018%E5%B9%B43%E6%9C%88">
+                        2018年3月
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="http://www.zhuguocheng29.cn/2018/03/14/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--ensemble/" class="title">机器学习--Ensemble</a></p>
+                    <p class="item-date"  style="margin-top:3px">
+                        <time datetime="2018-03-14 20:36:46 &#43;0800 CST" itemprop="datePublished">2018-03-14</time>
+                    </p>
+                </div>
+            </li>
+			<hr style="margin-right:90px;height:1px;border:0px;background-color:#D5D5D5;solid #eceff2;"/>
+            
+            <li>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category" >
+                        
+                        <a class="article-category-link" style="font-size:14px;" href="http://www.zhuguocheng29.cn/categories/2018%E5%B9%B43%E6%9C%88">
+                        2018年3月
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="http://www.zhuguocheng29.cn/2018/03/09/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E6%9C%89%E7%BB%93%E6%9E%84%E7%9A%84%E5%AD%A6%E4%B9%A0/" class="title">机器学习--有结构的学习</a></p>
+                    <p class="item-date"  style="margin-top:3px">
+                        <time datetime="2018-03-09 22:09:28 &#43;0800 CST" itemprop="datePublished">2018-03-09</time>
+                    </p>
+                </div>
+            </li>
+			<hr style="margin-right:90px;height:1px;border:0px;background-color:#D5D5D5;solid #eceff2;"/>
+            
+            <li>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category" >
+                        
+                        <a class="article-category-link" style="font-size:14px;" href="http://www.zhuguocheng29.cn/categories/2018%E5%B9%B43%E6%9C%88">
+                        2018年3月
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="http://www.zhuguocheng29.cn/2018/03/09/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--svm/" class="title">机器学习--SVM</a></p>
+                    <p class="item-date"  style="margin-top:3px">
+                        <time datetime="2018-03-09 14:57:03 &#43;0800 CST" itemprop="datePublished">2018-03-09</time>
+                    </p>
+                </div>
+            </li>
+			<hr style="margin-right:90px;height:1px;border:0px;background-color:#D5D5D5;solid #eceff2;"/>
+            
+            <li>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category" >
+                        
+                        <a class="article-category-link" style="font-size:14px;" href="http://www.zhuguocheng29.cn/categories/2018%E5%B9%B43%E6%9C%88">
+                        2018年3月
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="http://www.zhuguocheng29.cn/2018/03/08/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E8%BD%AC%E7%A7%BB%E5%AD%A6%E4%B9%A0/" class="title">机器学习--转移学习</a></p>
+                    <p class="item-date"  style="margin-top:3px">
+                        <time datetime="2018-03-08 22:04:39 &#43;0800 CST" itemprop="datePublished">2018-03-08</time>
+                    </p>
+                </div>
+            </li>
+			<hr style="margin-right:90px;height:1px;border:0px;background-color:#D5D5D5;solid #eceff2;"/>
+            
+            <li>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category" >
+                        
+                        <a class="article-category-link" style="font-size:14px;" href="http://www.zhuguocheng29.cn/categories/2018%E5%B9%B43%E6%9C%88">
+                        2018年3月
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="http://www.zhuguocheng29.cn/2018/03/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A02%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B/" class="title">机器学习--无监督学习2(生成模型)</a></p>
+                    <p class="item-date"  style="margin-top:3px">
+                        <time datetime="2018-03-07 15:37:04 &#43;0800 CST" itemprop="datePublished">2018-03-07</time>
+                    </p>
+                </div>
+            </li>
+			<hr style="margin-right:90px;height:1px;border:0px;background-color:#D5D5D5;solid #eceff2;"/>
+            
+
+        </ul>
+    </div>
+</div>
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.zhuguocheng29.cn/categories/2016">
+                    2016
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.zhuguocheng29.cn/categories/2017%E5%B9%B410%E6%9C%88">
+                    2017年10月
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.zhuguocheng29.cn/categories/2017%E5%B9%B411%E6%9C%88">
+                    2017年11月
+                </a>
+                <span class="category-list-count">4</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.zhuguocheng29.cn/categories/2017%E5%B9%B412%E6%9C%88">
+                    2017年12月
+                </a>
+                <span class="category-list-count">8</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.zhuguocheng29.cn/categories/2017%E5%B9%B46%E6%9C%88">
+                    2017年6月
+                </a>
+                <span class="category-list-count">28</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.zhuguocheng29.cn/categories/2017%E5%B9%B47%E6%9C%88">
+                    2017年7月
+                </a>
+                <span class="category-list-count">30</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.zhuguocheng29.cn/categories/2017%E5%B9%B48%E6%9C%88">
+                    2017年8月
+                </a>
+                <span class="category-list-count">18</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.zhuguocheng29.cn/categories/2017%E5%B9%B49%E6%9C%88">
+                    2017年9月
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.zhuguocheng29.cn/categories/2018%E5%B9%B42%E6%9C%88">
+                    2018年2月
+                </a>
+                <span class="category-list-count">5</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.zhuguocheng29.cn/categories/2018%E5%B9%B43%E6%9C%88">
+                    2018年3月
+                </a>
+                <span class="category-list-count">8</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        标签
+    </h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.zhuguocheng29.cn/tags/cdh">
+                    cdh
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.zhuguocheng29.cn/tags/elasticsearch">
+                    elasticsearch
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.zhuguocheng29.cn/tags/hbase">
+                    hbase
+                </a>
+                <span class="category-list-count">7</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.zhuguocheng29.cn/tags/hugo">
+                    hugo
+                </a>
+                <span class="category-list-count">5</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.zhuguocheng29.cn/tags/java">
+                    java
+                </a>
+                <span class="category-list-count">4</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.zhuguocheng29.cn/tags/leetcode">
+                    leetcode
+                </a>
+                <span class="category-list-count">36</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.zhuguocheng29.cn/tags/leetcode-%E5%88%86%E6%B2%BB">
+                    leetcode-分治
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.zhuguocheng29.cn/tags/leetcode-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92">
+                    leetcode-动态规划
+                </a>
+                <span class="category-list-count">8</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.zhuguocheng29.cn/tags/leetcode-%E8%B4%AA%E5%BF%83">
+                    leetcode-贪心
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.zhuguocheng29.cn/tags/linux">
+                    linux
+                </a>
+                <span class="category-list-count">5</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.zhuguocheng29.cn/tags/markdown">
+                    markdown
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.zhuguocheng29.cn/tags/mongodb">
+                    mongodb
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.zhuguocheng29.cn/tags/neo4j">
+                    neo4j
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.zhuguocheng29.cn/tags/oceanbase">
+                    oceanbase
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.zhuguocheng29.cn/tags/tensorflow">
+                    tensorflow
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.zhuguocheng29.cn/tags/vim">
+                    vim
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.zhuguocheng29.cn/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F">
+                    操作系统
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.zhuguocheng29.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0">
+                    机器学习
+                </a>
+                <span class="category-list-count">8</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.zhuguocheng29.cn/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0">
+                    深度学习
+                </a>
+                <span class="category-list-count">8</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.zhuguocheng29.cn/tags/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0">
+                    生活随记
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.zhuguocheng29.cn/tags/%E7%AE%97%E6%B3%95">
+                    算法
+                </a>
+                <span class="category-list-count">9</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="http://www.zhuguocheng29.cn/tags/%E7%AE%97%E6%B3%95%E8%AF%81%E6%98%8E">
+                    算法证明
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+    
+
+
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+
+    
+	</div>
+</div>
+
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018
+      Powered by <a href="http://www.zhuguocheng29.cn">Zhuguocheng</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>.
+    </div>
+  </div>
+</footer>
+
+
+<script src="http://www.zhuguocheng29.cn/fancybox/jquery.fancybox.pack.js"></script>
+<script src="http://www.zhuguocheng29.cn/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+</body>
+</html>

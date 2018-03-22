@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tensorflow on 好好学习，天天向上</title>
+    <link>http://www.zhuguocheng29.cn/tags/tensorflow/</link>
+    <description>Recent content in Tensorflow on 好好学习，天天向上</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Powered by [Zhuguocheng](http://www.zhuguocheng29.cn). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
+    <lastBuildDate>Sun, 12 Jun 2016 14:40:16 +0800</lastBuildDate>
+    
+	<atom:link href="http://www.zhuguocheng29.cn/tags/tensorflow/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>tensorflow的使用</title>
+      <link>http://www.zhuguocheng29.cn/2016/06/12/tensorflow%E7%9A%84%E4%BD%BF%E7%94%A8/</link>
+      <pubDate>Sun, 12 Jun 2016 14:40:16 +0800</pubDate>
+      
+      <guid>http://www.zhuguocheng29.cn/2016/06/12/tensorflow%E7%9A%84%E4%BD%BF%E7%94%A8/</guid>
+      <description></description>
+    </item>
+    
+  </channel>
+</rss>
