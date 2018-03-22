@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>2017年12月 on 好好学习，天天向上</title>
+    <link>http://zhuguocheng29.github.io/categories/2017%E5%B9%B412%E6%9C%88/</link>
+    <description>Recent content in 2017年12月 on 好好学习，天天向上</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <copyright>Powered by [Zhuguocheng](http://www.zhuguocheng29.cn). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
+    <lastBuildDate>Mon, 25 Dec 2017 14:30:59 +0800</lastBuildDate>
+    
+	<atom:link href="http://zhuguocheng29.github.io/categories/2017%E5%B9%B412%E6%9C%88/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>深度学习--BP算法推导</title>
+      <link>http://zhuguocheng29.github.io/2017/12/25/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0--bp%E7%AE%97%E6%B3%95%E6%8E%A8%E5%AF%BC/</link>
+      <pubDate>Mon, 25 Dec 2017 14:30:59 +0800</pubDate>
+      
+      <guid>http://zhuguocheng29.github.io/2017/12/25/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0--bp%E7%AE%97%E6%B3%95%E6%8E%A8%E5%AF%BC/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>深度学习--卷积神经网络</title>
+      <link>http://zhuguocheng29.github.io/2017/12/24/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0--%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</link>
+      <pubDate>Sun, 24 Dec 2017 14:28:38 +0800</pubDate>
+      
+      <guid>http://zhuguocheng29.github.io/2017/12/24/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0--%E5%8D%B7%E7%A7%AF%E7%A5%9E%E7%BB%8F%E7%BD%91%E7%BB%9C/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>深度学习基本概念</title>
+      <link>http://zhuguocheng29.github.io/2017/12/19/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</link>
+      <pubDate>Tue, 19 Dec 2017 15:57:34 +0800</pubDate>
+      
+      <guid>http://zhuguocheng29.github.io/2017/12/19/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0%E5%9F%BA%E6%9C%AC%E6%A6%82%E5%BF%B5/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Linux Shell</title>
+      <link>http://zhuguocheng29.github.io/2017/12/18/linux-shell/</link>
+      <pubDate>Mon, 18 Dec 2017 20:21:45 +0800</pubDate>
+      
+      <guid>http://zhuguocheng29.github.io/2017/12/18/linux-shell/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>LinuxVim程序编辑器</title>
+      <link>http://zhuguocheng29.github.io/2017/12/16/linuxvim%E7%A8%8B%E5%BA%8F%E7%BC%96%E8%BE%91%E5%99%A8/</link>
+      <pubDate>Sat, 16 Dec 2017 19:41:46 +0800</pubDate>
+      
+      <guid>http://zhuguocheng29.github.io/2017/12/16/linuxvim%E7%A8%8B%E5%BA%8F%E7%BC%96%E8%BE%91%E5%99%A8/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux磁盘与文件管理系统</title>
+      <link>http://zhuguocheng29.github.io/2017/12/08/linux%E7%A3%81%E7%9B%98%E4%B8%8E%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/</link>
+      <pubDate>Fri, 08 Dec 2017 11:18:03 +0800</pubDate>
+      
+      <guid>http://zhuguocheng29.github.io/2017/12/08/linux%E7%A3%81%E7%9B%98%E4%B8%8E%E6%96%87%E4%BB%B6%E7%AE%A1%E7%90%86%E7%B3%BB%E7%BB%9F/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>Linux文件与目录管理常用命令</title>
+      <link>http://zhuguocheng29.github.io/2017/12/07/linux%E6%96%87%E4%BB%B6%E4%B8%8E%E7%9B%AE%E5%BD%95%E7%AE%A1%E7%90%86%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</link>
+      <pubDate>Thu, 07 Dec 2017 16:42:41 +0800</pubDate>
+      
+      <guid>http://zhuguocheng29.github.io/2017/12/07/linux%E6%96%87%E4%BB%B6%E4%B8%8E%E7%9B%AE%E5%BD%95%E7%AE%A1%E7%90%86%E5%B8%B8%E7%94%A8%E5%91%BD%E4%BB%A4/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>ClouderaManager安装教程</title>
+      <link>http://zhuguocheng29.github.io/2017/12/05/clouderamanager%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</link>
+      <pubDate>Tue, 05 Dec 2017 15:02:47 +0800</pubDate>
+      
+      <guid>http://zhuguocheng29.github.io/2017/12/05/clouderamanager%E5%AE%89%E8%A3%85%E6%95%99%E7%A8%8B/</guid>
+      <description>&lt;p&gt;&lt;/p&gt;</description>
+    </item>
+    
+  </channel>
+</rss>
