@@ -1,0 +1,1147 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+    <title>机器学习--有结构的学习 &middot; 好好学习，天天向上</title>
+    <meta name="generator" content="Hugo 0.21" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <meta name="author" content="一只会Think的Zhu">
+    
+      <meta name="description" content="有结构的学习">
+    
+    
+    <link rel="canonical" href="https://zhuguocheng29.github.io/2018/03/09/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E6%9C%89%E7%BB%93%E6%9E%84%E7%9A%84%E5%AD%A6%E4%B9%A0/"/>
+    <link rel="icon" href="https://zhuguocheng29.github.io/favicon.ico">
+    <link rel="apple-touch-icon" href="https://zhuguocheng29.github.io/apple-touch-icon.png"/>
+    <link rel="stylesheet" href="https://zhuguocheng29.github.io/css/style.css">
+    <link rel="stylesheet" href="https://zhuguocheng29.github.io/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://zhuguocheng29.github.io/css/monokai.css">
+    <link rel="stylesheet" href="https://zhuguocheng29.github.io/fancybox/jquery.fancybox.css">
+    
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:400italic,400,600' rel='stylesheet' type='text/css'>
+    <link href='https://fonts.googleapis.com/css?family=Source+Code+Pro' rel='stylesheet' type='text/css'>
+    <meta property="og:title" content="机器学习--有结构的学习" />
+<meta property="og:description" content="有结构的学习" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://zhuguocheng29.github.io/2018/03/09/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E6%9C%89%E7%BB%93%E6%9E%84%E7%9A%84%E5%AD%A6%E4%B9%A0/" />
+
+
+
+<meta property="article:published_time" content="2018-03-09T22:09:28&#43;08:00"/>
+<meta property="article:modified_time" content="2018-03-09T22:09:28&#43;08:00"/>
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+<meta itemprop="name" content="机器学习--有结构的学习">
+<meta itemprop="description" content="有结构的学习">
+
+
+<meta itemprop="dateModified" content="2018-03-09T22:09:28&#43;08:00" />
+<meta itemprop="wordCount" content="626">
+
+
+
+<meta itemprop="keywords" content="2016,2017年10月,2017年11月,2017年12月,2017年6月,2017年7月,2017年8月,2017年9月,2018年2月,2018年3月,cdh,elasticsearch,hbase,hugo,java,leetcode,leetcode-分治,leetcode-动态规划,leetcode-贪心,linux,markdown,mongodb,neo4j,oceanbase,tensorflow,vim,操作系统,机器学习,深度学习,生活随记,算法,算法证明," />
+
+    
+
+  <meta name="twitter:card" content="summary"/>
+
+
+
+<meta name="twitter:text:title" content="机器学习--有结构的学习"/>
+<meta name="twitter:title" content="机器学习--有结构的学习"/>
+<meta name="twitter:description" content="有结构的学习"/>
+
+
+    
+
+    
+
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+</head>
+<body>
+<div class="container">
+
+
+<div id="container">
+	<header id="header">
+  <div id="header-main" class="header-inner">
+    <div class="outer">
+      <a href="https://zhuguocheng29.github.io/" id="logo">
+          
+          <i class="logo" style="background-image: url('https://zhuguocheng29.github.io/css/images/logo.png')"></i>
+          
+          <span class="site-title">好好学习，天天向上</span>
+      </a>
+      <nav id="main-nav">
+          
+          
+          <a class="main-nav-link" href="https://zhuguocheng29.github.io/">主页</a>
+          
+          
+          
+          <a class="main-nav-link" href="https://zhuguocheng29.github.io/categories/">分类</a>
+          
+          
+          
+          <a class="main-nav-link" href="https://zhuguocheng29.github.io/tags/">标签</a>
+          
+          
+
+          
+          <a class="main-nav-link" href="/about/">关于作者</a>
+          
+
+          
+          
+          
+          
+          
+          
+          
+      </nav>
+        <nav id="sub-nav">
+          <div class="profile" id="profile-nav">
+            <a id="profile-anchor" href="javascript:;"><img class="avatar" src="https://zhuguocheng29.github.io/css/images/avatar.png"><i class="fa fa-caret-down"></i></a>
+          </div>
+        </nav>
+        <div id="search-form-wrap">
+          <form action="http://baidu.com" method="get" accept-charset="UTF-8" class="search-form">
+              <input type="search" name="q" class="search-form-input" placeholder="Search">
+              <button type="submit" class="search-form-submit">
+              </button>
+              <input type="hidden" name="sitesearch" value="https://zhuguocheng29.github.io/" />
+         </form>
+        </div>
+    </div>
+  </div>
+  <div id="main-nav-mobile" class="header-sub header-inner">
+    <table class="menu outer">
+      <tbody>
+          <tr>
+          
+          
+          <td><a class="main-nav-link" href="https://zhuguocheng29.github.io/">主页</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="https://zhuguocheng29.github.io/categories/">分类</a></td>
+          
+          
+          
+          <td><a class="main-nav-link" href="https://zhuguocheng29.github.io/tags/">标签</a></td>
+          
+          
+
+          
+          <td><a class="main-nav-link" href="/about/">关于作者</a></td>
+          
+
+          
+          
+          
+          
+          
+          
+          
+          <td>
+          <form action="http://baidu.com" method="get" accept-charset="UTF-8" class="search-form">
+          <input type="search" name="q" class="search-form-input" placeholder="Search">
+          <input type="hidden" name="sitesearch" value="https://zhuguocheng29.github.io/" />
+          </form>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</header>
+
+   	
+   	<div class="outer">
+   	
+    	<aside id="profile">
+  <div class="inner profile-inner">
+    <div class="base-info profile-block">
+      
+      <img id="avatar" src="https://www.gravatar.com/avatar/a37f6cb569a7c36f8e0c32a4dc9f81f2?s=100&d=identicon"/>
+      
+      <h2 id="name">一只会Think的Zhu</h2>
+      <h3 id="title">Blogger - Programmer - Engineer</h3>
+      <span id="location"><i class="fa fa-map-marker"></i>China</span>
+      
+          <a id="follow" href="https://github.com/zhuguocheng29">
+              关注
+          </a>
+      
+    </div>
+    <div class="article-info profile-block">
+      <div class="article-info-block">
+        109
+        <span>文章</span>
+      </div>
+      <div class="article-info-block">
+        
+          22
+        
+        <span>
+            标签
+        </span>
+      </div>
+    </div>
+    <div class="profile-block social-links">
+      <table>
+        <tr>
+          
+<td><a href="//github.com/zhuguocheng29" target="_blank" title="GitHub"><i class="fa fa-github"></i></a></td>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<td><a href="//weibo.com/u/2596645693?refer_flag=1001030101_&is_all=1" target="_blank" title="Weibo"><i class="fa fa-weibo"></i></a></td>
+
+          <td><a href="https://zhuguocheng29.github.io/index.xml" target="_blank" title="RSS"><i class="fa fa-rss"></i></a></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+</aside>
+
+    
+
+    <section id="main">
+    
+    <article id="page-undefined" class="article article-type-page" itemscope="" itemprop="blogPost">
+    <div class="article-inner">
+        
+
+        <header class="article-header">
+    <a href="https://zhuguocheng29.github.io/2018/03/09/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E6%9C%89%E7%BB%93%E6%9E%84%E7%9A%84%E5%AD%A6%E4%B9%A0/">
+    <h1 class="article-title" itemprop="name">
+        机器学习--有结构的学习
+    </h1>
+    </a>
+    <div class="article-meta">
+
+        
+        <div class="article-date">
+            <i class="fa fa-calendar"></i>
+            <time datetime="2018-03-09 22:09:28 &#43;0800 CST" itemprop="datePublished">2018-03-09</time>
+            &middot;
+            626
+            words
+            &middot;
+            2
+            minute read
+        </div>
+        
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-folder"></i>
+                
+                
+                <a class="article-category-link" href="https://zhuguocheng29.github.io/categories/2018%E5%B9%B43%E6%9C%88">2018年3月</a>
+                
+                
+            </div>
+            
+        
+
+        
+            
+            
+            <div class="article-category">
+                <i class="fa fa-tags"></i>
+                
+                
+                <a class="article-category-link" href="https://zhuguocheng29.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0">机器学习</a>
+                
+                
+            </div>
+            
+        
+		
+		
+    </div>
+</header>
+
+        <div class="article-entry" itemprop="articleBody">
+            <p></p>
+
+<h2 id="有结构的学习-structured-learning">有结构的学习（structured learning）</h2>
+
+<p>之前的输入和输出都是vector,但是有时希望输出时list,tree等等</p>
+
+<p><img src="/post/StructuredLearning/1.png" center="center"/></p>
+
+<p>有结构的学习有一个统一框架，如下图</p>
+
+<p><img src="/post/StructuredLearning/2.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/3.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/4.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/5.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/6.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/7.png" center="center"/></p>
+
+<h3 id="解这个统一框架有三个问题">解这个统一框架有三个问题</h3>
+
+<p><img src="/post/StructuredLearning/8.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/9.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/10.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/11.png" center="center"/></p>
+
+<h3 id="1-structured-linear-model">1. Structured Linear Model</h3>
+
+<p><img src="/post/StructuredLearning/12.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/13.png" center="center"/></p>
+
+<p>为了更好的performance，对于feature，会用CNN来抽取</p>
+
+<p><img src="/post/StructuredLearning/14.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/15.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/16.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/17.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/18.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/19.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/20.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/21.png" center="center"/></p>
+
+<h3 id="2-structured-svm">2. Structured SVM</h3>
+
+<p><img src="/post/StructuredLearning/22.png" center="center"/></p>
+
+<h4 id="separable-case">Separable case</h4>
+
+<p>对于separable case，通过下图公式可求得\(\hat{w}\)</p>
+
+<p><img src="/post/StructuredLearning/23.png" center="center"/></p>
+
+<h4 id="non-separable-case">Non-separable case</h4>
+
+<h5 id="第一种情形">第一种情形</h5>
+
+<p><img src="/post/StructuredLearning/24.png" center="center"/></p>
+
+<p>如下图\(C_n\)是第一幅图减去第三幅图的值，然后使用梯度下降方求得\(w\)</p>
+
+<p><img src="/post/StructuredLearning/25.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/26.png" center="center"/></p>
+
+<h5 id="第二种情形">第二种情形</h5>
+
+<p><img src="/post/StructuredLearning/27.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/28.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/29.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/30.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/31.png" center="center"/></p>
+
+<h4 id="structured-svm">Structured SVM</h4>
+
+<p><img src="/post/StructuredLearning/32.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/33.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/34.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/35.png" center="center"/></p>
+
+<p>求解损失函数\(C\)的方法如下：</p>
+
+<p><img src="/post/StructuredLearning/36.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/37.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/38.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/39.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/40.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/41.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/42.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/43.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/44.png" center="center"/></p>
+
+<h4 id="multi-class-svm">Multi-class SVM</h4>
+
+<p>下图中，\(y_k\)在哪个类，\(x\)就在这个类对应的位置</p>
+
+<p><img src="/post/StructuredLearning/45.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/46.png" center="center"/></p>
+
+<p>下图改为： There are only \(N(K-1)\) constraints</p>
+
+<p><img src="/post/StructuredLearning/47.png" center="center"/></p>
+
+<h4 id="binary-svm">Binary SVM</h4>
+
+<p>Set \(K = 2,y \in {\{1,2}\}\)</p>
+
+<p><img src="/post/StructuredLearning/48.png" center="center"/></p>
+
+<h4 id="beyond-structured-svm">Beyond Structured SVM</h4>
+
+<p><img src="/post/StructuredLearning/49.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/50.png" center="center"/></p>
+
+<h3 id="3-sequence-labeling">3. Sequence Labeling</h3>
+
+<p><img src="/post/StructuredLearning/51.png" center="center"/></p>
+
+<p>以下均针对POS tagging例子（对于句子中的词，输入词，输出词性）</p>
+
+<p><img src="/post/StructuredLearning/52.png" center="center"/></p>
+
+<h4 id="hidden-markov-model-hmm">Hidden Markov Model(HMM)</h4>
+
+<p>HMM的假设：</p>
+
+<ol>
+<li>基于语法产生了一个POS sequence</li>
+<li>给定一个POS的tag，基于字典产生对应的词汇，最后生成一个句子</li>
+</ol>
+
+<p><img src="/post/StructuredLearning/53.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/54.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/55.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/56.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/57.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/58.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/59.png" center="center"/></p>
+
+<p>HMM缺点：会出现训练集中没有出现过的情形</p>
+
+<p><img src="/post/StructuredLearning/60.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/61.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/62.png" center="center"/></p>
+
+<h4 id="conditional-random-field-crf">Conditional Random Field(CRF)</h4>
+
+<p>CRF是HMM的改进，但是原理一样</p>
+
+<p><img src="/post/StructuredLearning/63.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/64.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/65.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/66.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/67.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/68.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/69.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/70.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/71.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/72.png" center="center"/></p>
+
+<p>之后使用梯度上升法训练</p>
+
+<p><img src="/post/StructuredLearning/73.png" center="center"/></p>
+
+<p>t是word,s是tag</p>
+
+<p><img src="/post/StructuredLearning/74.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/75.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/76.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/77.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/78.png" center="center"/></p>
+
+<h3 id="4-rnn-lstm-vs-hmm-crf-structured-perceptron-svm">4. RNN，LSTM VS HMM,CRF,Structured Perceptron/SVM</h3>
+
+<p>针对t时刻的输出，单向的RNN,LSTM只能看到1-t-1时刻的情况，却看不到t+1及其之后的情况。而HMM使用Viterbi算法考虑了这个句子。但是viterbi算法对双向RNN效果未知</p>
+
+<p>其余如下图</p>
+
+<p><img src="/post/StructuredLearning/79.png" center="center"/></p>
+
+<h4 id="将两种模型整合">将两种模型整合</h4>
+
+<p><img src="/post/StructuredLearning/80.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/81.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/82.png" center="center"/></p>
+
+<p><img src="/post/StructuredLearning/83.png" center="center"/></p>
+
+<p>Conditional GAN可以用字符串生成图片，现在有种想法：GAN可以作为训练structured learning的一种方式</p>
+
+<p><img src="/post/StructuredLearning/84.png" center="center"/></p>
+        </div>
+        <footer class="article-footer">
+    <a data-url="https://zhuguocheng29.github.io/2018/03/09/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E6%9C%89%E7%BB%93%E6%9E%84%E7%9A%84%E5%AD%A6%E4%B9%A0/" data-id="8d0f9e2ee95f76cf9947d78d81ff67f4" class="article-share-link">
+        <i class="fa fa-share"></i>
+        Share
+    </a>
+	
+    
+    <script>
+    (function ($) {
+        
+        if (typeof(__SHARE_BUTTON_BINDED__) === 'undefined' || !__SHARE_BUTTON_BINDED__) {
+            __SHARE_BUTTON_BINDED__ = true;
+        } else {
+            return;
+        }
+        $('body').on('click', function() {
+            $('.article-share-box.on').removeClass('on');
+        }).on('click', '.article-share-link', function(e) {
+            e.stopPropagation();
+
+            var $this = $(this),
+                url = $this.attr('data-url'),
+                encodedUrl = encodeURIComponent(url),
+                id = 'article-share-box-' + $this.attr('data-id'),
+                offset = $this.offset(),
+                box;
+
+            if ($('#' + id).length) {
+                box = $('#' + id);
+
+                if (box.hasClass('on')){
+                    box.removeClass('on');
+                    return;
+                }
+            } else {
+                var html = [
+                    '<div id="' + id + '" class="article-share-box">',
+                        '<input class="article-share-input" value="' + url + '">',
+                        '<div class="article-share-links">',
+							'<a href="http://v.t.sina.com.cn/share/share.php?title=' + encodedUrl + '&content=' + encodedUrl + '" class="fa fa-weibo article-share-facebook" target="_blank" title="Weibo"></a>',					
+                            '<a href="https://twitter.com/intent/tweet?url=' + encodedUrl + '" class="fa fa-twitter article-share-twitter" target="_blank" title="Twitter"></a>',
+                            '<a href="http://pinterest.com/pin/create/button/?url=' + encodedUrl + '" class="fa fa-pinterest article-share-pinterest" target="_blank" title="Pinterest"></a>',
+                            '<a href="https://plus.google.com/share?url=' + encodedUrl + '" class="fa fa-google article-share-google" target="_blank" title="Google+"></a>',
+                        '</div>',
+                    '</div>'
+                ].join('');
+
+              box = $(html);	
+
+              $('body').append(box);
+            }
+
+            $('.article-share-box.on').hide();
+
+            box.css({
+                top: offset.top + 25,
+                left: offset.left
+            }).addClass('on');
+
+        }).on('click', '.article-share-box', function (e) {
+            e.stopPropagation();
+        }).on('click', '.article-share-box-input', function () {
+            $(this).select();
+        }).on('click', '.article-share-box-link', function (e) {
+            e.preventDefault();
+            e.stopPropagation();
+
+            window.open(this.href, 'article-share-box-window-' + Date.now(), 'width=500,height=450');
+        });
+    })(jQuery);
+    </script>
+</footer>
+
+    </div>
+
+    
+<nav id="article-nav">
+    
+    <a href="https://zhuguocheng29.github.io/2018/03/09/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--svm/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          上一篇
+      </strong>
+      <div class="article-nav-title">机器学习--SVM</div>
+    </a>
+    
+
+    
+    <a href="https://zhuguocheng29.github.io/2018/03/14/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--ensemble/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">
+          下一篇
+      </strong>
+      <div class="article-nav-title">机器学习--Ensemble</div>
+    </a>
+    
+</nav>
+
+
+</article>
+
+
+
+
+
+
+<div id="lv-container" data-id="city" data-uid="MTAyMC8zMjQ2Ni85MDI3">
+<script type="text/javascript">
+   (function(d, s) {
+       var j, e = d.getElementsByTagName(s)[0];
+
+       if (typeof LivereTower === 'function') { return; }
+
+       j = d.createElement(s);
+       j.src = 'https://cdn-city.livere.com/js/embed.dist.js';
+       j.async = true;
+
+       e.parentNode.insertBefore(j, e);
+   })(document, 'script');
+</script>
+<noscript>为正常使用来必力评论功能请激活JavaScript</noscript>
+</div>
+
+
+
+    </section>
+
+   	
+    	<aside id="sidebar">
+    
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        最近
+    </h3>
+    <div class="widget">
+        <ul id="recent-post">
+					<hr style="margin-right:90px;height:1px;border:0px;background-color:#D5D5D5;solid #eceff2;"/>
+
+            
+            <li>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category" >
+                        
+                        <a class="article-category-link" style="font-size:14px;" href="https://zhuguocheng29.github.io/categories/2018%E5%B9%B43%E6%9C%88">
+                        2018年3月
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://zhuguocheng29.github.io/2018/03/14/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--ensemble/" class="title">机器学习--Ensemble</a></p>
+                    <p class="item-date"  style="margin-top:3px">
+                        <time datetime="2018-03-14 20:36:46 &#43;0800 CST" itemprop="datePublished">2018-03-14</time>
+                    </p>
+                </div>
+            </li>
+			<hr style="margin-right:90px;height:1px;border:0px;background-color:#D5D5D5;solid #eceff2;"/>
+            
+            <li>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category" >
+                        
+                        <a class="article-category-link" style="font-size:14px;" href="https://zhuguocheng29.github.io/categories/2018%E5%B9%B43%E6%9C%88">
+                        2018年3月
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://zhuguocheng29.github.io/2018/03/09/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E6%9C%89%E7%BB%93%E6%9E%84%E7%9A%84%E5%AD%A6%E4%B9%A0/" class="title">机器学习--有结构的学习</a></p>
+                    <p class="item-date"  style="margin-top:3px">
+                        <time datetime="2018-03-09 22:09:28 &#43;0800 CST" itemprop="datePublished">2018-03-09</time>
+                    </p>
+                </div>
+            </li>
+			<hr style="margin-right:90px;height:1px;border:0px;background-color:#D5D5D5;solid #eceff2;"/>
+            
+            <li>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category" >
+                        
+                        <a class="article-category-link" style="font-size:14px;" href="https://zhuguocheng29.github.io/categories/2018%E5%B9%B43%E6%9C%88">
+                        2018年3月
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://zhuguocheng29.github.io/2018/03/09/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--svm/" class="title">机器学习--SVM</a></p>
+                    <p class="item-date"  style="margin-top:3px">
+                        <time datetime="2018-03-09 14:57:03 &#43;0800 CST" itemprop="datePublished">2018-03-09</time>
+                    </p>
+                </div>
+            </li>
+			<hr style="margin-right:90px;height:1px;border:0px;background-color:#D5D5D5;solid #eceff2;"/>
+            
+            <li>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category" >
+                        
+                        <a class="article-category-link" style="font-size:14px;" href="https://zhuguocheng29.github.io/categories/2018%E5%B9%B43%E6%9C%88">
+                        2018年3月
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://zhuguocheng29.github.io/2018/03/08/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E8%BD%AC%E7%A7%BB%E5%AD%A6%E4%B9%A0/" class="title">机器学习--转移学习</a></p>
+                    <p class="item-date"  style="margin-top:3px">
+                        <time datetime="2018-03-08 22:04:39 &#43;0800 CST" itemprop="datePublished">2018-03-08</time>
+                    </p>
+                </div>
+            </li>
+			<hr style="margin-right:90px;height:1px;border:0px;background-color:#D5D5D5;solid #eceff2;"/>
+            
+            <li>
+                <div class="item-inner">
+                    
+                    
+                    <p class="item-category" >
+                        
+                        <a class="article-category-link" style="font-size:14px;" href="https://zhuguocheng29.github.io/categories/2018%E5%B9%B43%E6%9C%88">
+                        2018年3月
+                        </a>
+                    </p>
+                    
+                    
+                    <p class="item-title"><a href="https://zhuguocheng29.github.io/2018/03/07/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0--%E6%97%A0%E7%9B%91%E7%9D%A3%E5%AD%A6%E4%B9%A02%E7%94%9F%E6%88%90%E6%A8%A1%E5%9E%8B/" class="title">机器学习--无监督学习2(生成模型)</a></p>
+                    <p class="item-date"  style="margin-top:3px">
+                        <time datetime="2018-03-07 15:37:04 &#43;0800 CST" itemprop="datePublished">2018-03-07</time>
+                    </p>
+                </div>
+            </li>
+			<hr style="margin-right:90px;height:1px;border:0px;background-color:#D5D5D5;solid #eceff2;"/>
+            
+
+        </ul>
+    </div>
+</div>
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">分类</h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/categories/2016">
+                    2016
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/categories/2017%E5%B9%B410%E6%9C%88">
+                    2017年10月
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/categories/2017%E5%B9%B411%E6%9C%88">
+                    2017年11月
+                </a>
+                <span class="category-list-count">4</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/categories/2017%E5%B9%B412%E6%9C%88">
+                    2017年12月
+                </a>
+                <span class="category-list-count">8</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/categories/2017%E5%B9%B46%E6%9C%88">
+                    2017年6月
+                </a>
+                <span class="category-list-count">28</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/categories/2017%E5%B9%B47%E6%9C%88">
+                    2017年7月
+                </a>
+                <span class="category-list-count">30</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/categories/2017%E5%B9%B48%E6%9C%88">
+                    2017年8月
+                </a>
+                <span class="category-list-count">18</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/categories/2017%E5%B9%B49%E6%9C%88">
+                    2017年9月
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/categories/2018%E5%B9%B42%E6%9C%88">
+                    2018年2月
+                </a>
+                <span class="category-list-count">5</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/categories/2018%E5%B9%B43%E6%9C%88">
+                    2018年3月
+                </a>
+                <span class="category-list-count">8</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+    
+
+
+<div class="widget-wrap">
+    <h3 class="widget-title">
+        标签
+    </h3>
+    <div class="widget">
+        <ul class="category-list">
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/cdh">
+                    cdh
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/elasticsearch">
+                    elasticsearch
+                </a>
+                <span class="category-list-count">3</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/hbase">
+                    hbase
+                </a>
+                <span class="category-list-count">7</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/hugo">
+                    hugo
+                </a>
+                <span class="category-list-count">5</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/java">
+                    java
+                </a>
+                <span class="category-list-count">4</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/leetcode">
+                    leetcode
+                </a>
+                <span class="category-list-count">36</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/leetcode-%E5%88%86%E6%B2%BB">
+                    leetcode-分治
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/leetcode-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92">
+                    leetcode-动态规划
+                </a>
+                <span class="category-list-count">8</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/leetcode-%E8%B4%AA%E5%BF%83">
+                    leetcode-贪心
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/linux">
+                    linux
+                </a>
+                <span class="category-list-count">5</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/markdown">
+                    markdown
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/mongodb">
+                    mongodb
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/neo4j">
+                    neo4j
+                </a>
+                <span class="category-list-count">2</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/oceanbase">
+                    oceanbase
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/tensorflow">
+                    tensorflow
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/vim">
+                    vim
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F">
+                    操作系统
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0">
+                    机器学习
+                </a>
+                <span class="category-list-count">8</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0">
+                    深度学习
+                </a>
+                <span class="category-list-count">8</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0">
+                    生活随记
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/%E7%AE%97%E6%B3%95">
+                    算法
+                </a>
+                <span class="category-list-count">9</span>
+            </li>
+            
+            <li class="category-list-item">
+                
+                <a class="category-list-link" href="https://zhuguocheng29.github.io/tags/%E7%AE%97%E6%B3%95%E8%AF%81%E6%98%8E">
+                    算法证明
+                </a>
+                <span class="category-list-count">1</span>
+            </li>
+            
+        </ul>
+    </div>
+</div>
+
+
+
+
+    
+
+
+    <div id="toTop" class="fa fa-angle-up"></div>
+</aside>
+
+    
+	</div>
+</div>
+
+<footer id="footer">
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2018
+      Powered by <a href="http://www.zhuguocheng29.cn">Zhuguocheng</a>. Theme by <a href="http://github.com/ppoffice">PPOffice</a>.
+    </div>
+  </div>
+</footer>
+
+
+<script src="https://zhuguocheng29.github.io/fancybox/jquery.fancybox.pack.js"></script>
+<script src="https://zhuguocheng29.github.io/js/script.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.9.0/highlight.min.js"></script>
+
+
+<script>hljs.initHighlightingOnLoad();</script>
+
+
+<script type="text/x-mathjax-config">
+MathJax.Hub.Config({
+  tex2jax: {
+    inlineMath: [['$','$'], ['\\(','\\)']]}
+  });
+</script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+
+
+
+</body>
+</html>
