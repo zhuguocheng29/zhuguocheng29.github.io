@@ -2,211 +2,274 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on 好好学习，天天向上</title>
-    <link>https://zhuguocheng29.github.io/tags/</link>
+    <link>https://www.zhuguocheng29.cn/tags/</link>
     <description>Recent content in Tags on 好好学习，天天向上</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Powered by [Zhuguocheng](http://www.zhuguocheng29.cn). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
+    <copyright>Powered by [Zhuguocheng](http://www.zhuguocheng29.cn). Theme by [PPOffice](http://github.com/ppoffice). 备案: [冀ICP备16005710号-1](http://www.miitbeian.gov.cn)</copyright>
     <lastBuildDate>Tue, 05 Dec 2017 15:02:47 +0800</lastBuildDate>
     
-	<atom:link href="https://zhuguocheng29.github.io/tags/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.zhuguocheng29.cn/tags/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Cdh</title>
-      <link>https://zhuguocheng29.github.io/tags/cdh/</link>
+      <link>https://www.zhuguocheng29.cn/tags/cdh/</link>
       <pubDate>Tue, 05 Dec 2017 15:02:47 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/tags/cdh/</guid>
+      <guid>https://www.zhuguocheng29.cn/tags/cdh/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Elasticsearch</title>
-      <link>https://zhuguocheng29.github.io/tags/elasticsearch/</link>
+      <link>https://www.zhuguocheng29.cn/tags/elasticsearch/</link>
       <pubDate>Fri, 03 Nov 2017 11:15:33 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/tags/elasticsearch/</guid>
+      <guid>https://www.zhuguocheng29.cn/tags/elasticsearch/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Git</title>
+      <link>https://www.zhuguocheng29.cn/tags/git/</link>
+      <pubDate>Tue, 11 Sep 2018 22:14:40 +0800</pubDate>
+      
+      <guid>https://www.zhuguocheng29.cn/tags/git/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hbase</title>
-      <link>https://zhuguocheng29.github.io/tags/hbase/</link>
+      <link>https://www.zhuguocheng29.cn/tags/hbase/</link>
       <pubDate>Wed, 01 Nov 2017 20:30:20 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/tags/hbase/</guid>
+      <guid>https://www.zhuguocheng29.cn/tags/hbase/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Hugo</title>
-      <link>https://zhuguocheng29.github.io/tags/hugo/</link>
+      <link>https://www.zhuguocheng29.cn/tags/hugo/</link>
       <pubDate>Thu, 22 Jun 2017 18:48:30 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/tags/hugo/</guid>
+      <guid>https://www.zhuguocheng29.cn/tags/hugo/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Java</title>
-      <link>https://zhuguocheng29.github.io/tags/java/</link>
-      <pubDate>Wed, 09 Aug 2017 10:40:46 +0800</pubDate>
+      <link>https://www.zhuguocheng29.cn/tags/java/</link>
+      <pubDate>Tue, 22 May 2018 21:11:23 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/tags/java/</guid>
+      <guid>https://www.zhuguocheng29.cn/tags/java/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Leetcode</title>
-      <link>https://zhuguocheng29.github.io/tags/leetcode/</link>
+      <link>https://www.zhuguocheng29.cn/tags/leetcode/</link>
       <pubDate>Sat, 12 Aug 2017 10:56:24 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/tags/leetcode/</guid>
+      <guid>https://www.zhuguocheng29.cn/tags/leetcode/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Leetcode 分治</title>
-      <link>https://zhuguocheng29.github.io/tags/leetcode-%E5%88%86%E6%B2%BB/</link>
+      <link>https://www.zhuguocheng29.cn/tags/leetcode-%E5%88%86%E6%B2%BB/</link>
       <pubDate>Tue, 08 Aug 2017 13:56:16 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/tags/leetcode-%E5%88%86%E6%B2%BB/</guid>
+      <guid>https://www.zhuguocheng29.cn/tags/leetcode-%E5%88%86%E6%B2%BB/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Leetcode 动态规划</title>
-      <link>https://zhuguocheng29.github.io/tags/leetcode-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
+      <link>https://www.zhuguocheng29.cn/tags/leetcode-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</link>
       <pubDate>Mon, 07 Aug 2017 10:00:13 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/tags/leetcode-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</guid>
+      <guid>https://www.zhuguocheng29.cn/tags/leetcode-%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Leetcode 贪心</title>
-      <link>https://zhuguocheng29.github.io/tags/leetcode-%E8%B4%AA%E5%BF%83/</link>
+      <link>https://www.zhuguocheng29.cn/tags/leetcode-%E8%B4%AA%E5%BF%83/</link>
       <pubDate>Thu, 29 Jun 2017 11:27:29 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/tags/leetcode-%E8%B4%AA%E5%BF%83/</guid>
+      <guid>https://www.zhuguocheng29.cn/tags/leetcode-%E8%B4%AA%E5%BF%83/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Linux</title>
-      <link>https://zhuguocheng29.github.io/tags/linux/</link>
-      <pubDate>Mon, 18 Dec 2017 20:21:45 +0800</pubDate>
+      <link>https://www.zhuguocheng29.cn/tags/linux/</link>
+      <pubDate>Thu, 17 May 2018 14:53:27 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/tags/linux/</guid>
+      <guid>https://www.zhuguocheng29.cn/tags/linux/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Markdown</title>
-      <link>https://zhuguocheng29.github.io/tags/markdown/</link>
+      <link>https://www.zhuguocheng29.cn/tags/markdown/</link>
       <pubDate>Sat, 20 May 2017 12:10:51 +0200</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/tags/markdown/</guid>
+      <guid>https://www.zhuguocheng29.cn/tags/markdown/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Mongodb</title>
-      <link>https://zhuguocheng29.github.io/tags/mongodb/</link>
+      <link>https://www.zhuguocheng29.cn/tags/mongodb/</link>
       <pubDate>Sun, 30 Jul 2017 14:46:29 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/tags/mongodb/</guid>
+      <guid>https://www.zhuguocheng29.cn/tags/mongodb/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Neo4j</title>
-      <link>https://zhuguocheng29.github.io/tags/neo4j/</link>
+      <link>https://www.zhuguocheng29.cn/tags/neo4j/</link>
       <pubDate>Mon, 31 Jul 2017 22:01:12 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/tags/neo4j/</guid>
+      <guid>https://www.zhuguocheng29.cn/tags/neo4j/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Node.Js</title>
+      <link>https://www.zhuguocheng29.cn/tags/node.js/</link>
+      <pubDate>Mon, 23 Jul 2018 23:06:07 +0800</pubDate>
+      
+      <guid>https://www.zhuguocheng29.cn/tags/node.js/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Oceanbase</title>
-      <link>https://zhuguocheng29.github.io/tags/oceanbase/</link>
+      <link>https://www.zhuguocheng29.cn/tags/oceanbase/</link>
       <pubDate>Sat, 22 Jul 2017 23:29:46 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/tags/oceanbase/</guid>
+      <guid>https://www.zhuguocheng29.cn/tags/oceanbase/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Python</title>
+      <link>https://www.zhuguocheng29.cn/tags/python/</link>
+      <pubDate>Wed, 18 Jul 2018 22:49:19 +0800</pubDate>
+      
+      <guid>https://www.zhuguocheng29.cn/tags/python/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>Scala</title>
+      <link>https://www.zhuguocheng29.cn/tags/scala/</link>
+      <pubDate>Tue, 22 May 2018 16:33:05 +0800</pubDate>
+      
+      <guid>https://www.zhuguocheng29.cn/tags/scala/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Tensorflow</title>
-      <link>https://zhuguocheng29.github.io/tags/tensorflow/</link>
+      <link>https://www.zhuguocheng29.cn/tags/tensorflow/</link>
       <pubDate>Sun, 12 Jun 2016 14:40:16 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/tags/tensorflow/</guid>
+      <guid>https://www.zhuguocheng29.cn/tags/tensorflow/</guid>
       <description></description>
     </item>
     
     <item>
       <title>Vim</title>
-      <link>https://zhuguocheng29.github.io/tags/vim/</link>
+      <link>https://www.zhuguocheng29.cn/tags/vim/</link>
       <pubDate>Sun, 12 Jun 2016 14:45:41 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/tags/vim/</guid>
+      <guid>https://www.zhuguocheng29.cn/tags/vim/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>工作复盘</title>
+      <link>https://www.zhuguocheng29.cn/tags/%E5%B7%A5%E4%BD%9C%E5%A4%8D%E7%9B%98/</link>
+      <pubDate>Sun, 24 Mar 2019 22:57:03 +0800</pubDate>
+      
+      <guid>https://www.zhuguocheng29.cn/tags/%E5%B7%A5%E4%BD%9C%E5%A4%8D%E7%9B%98/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>工作记录</title>
+      <link>https://www.zhuguocheng29.cn/tags/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/</link>
+      <pubDate>Mon, 27 Aug 2018 22:20:42 +0800</pubDate>
+      
+      <guid>https://www.zhuguocheng29.cn/tags/%E5%B7%A5%E4%BD%9C%E8%AE%B0%E5%BD%95/</guid>
       <description></description>
     </item>
     
     <item>
       <title>操作系统</title>
-      <link>https://zhuguocheng29.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link>
+      <link>https://www.zhuguocheng29.cn/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</link>
       <pubDate>Sun, 12 Jun 2016 14:43:01 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</guid>
+      <guid>https://www.zhuguocheng29.cn/tags/%E6%93%8D%E4%BD%9C%E7%B3%BB%E7%BB%9F/</guid>
       <description></description>
     </item>
     
     <item>
       <title>机器学习</title>
-      <link>https://zhuguocheng29.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
+      <link>https://www.zhuguocheng29.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</link>
       <pubDate>Wed, 14 Mar 2018 20:36:46 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</guid>
+      <guid>https://www.zhuguocheng29.cn/tags/%E6%9C%BA%E5%99%A8%E5%AD%A6%E4%B9%A0/</guid>
       <description></description>
     </item>
     
     <item>
       <title>深度学习</title>
-      <link>https://zhuguocheng29.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</link>
+      <link>https://www.zhuguocheng29.cn/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</link>
       <pubDate>Sun, 04 Mar 2018 10:35:01 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</guid>
+      <guid>https://www.zhuguocheng29.cn/tags/%E6%B7%B1%E5%BA%A6%E5%AD%A6%E4%B9%A0/</guid>
       <description></description>
     </item>
     
     <item>
       <title>生活随记</title>
-      <link>https://zhuguocheng29.github.io/tags/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0/</link>
+      <link>https://www.zhuguocheng29.cn/tags/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0/</link>
       <pubDate>Mon, 12 Jun 2017 19:45:32 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/tags/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0/</guid>
+      <guid>https://www.zhuguocheng29.cn/tags/%E7%94%9F%E6%B4%BB%E9%9A%8F%E8%AE%B0/</guid>
       <description></description>
     </item>
     
     <item>
       <title>算法</title>
-      <link>https://zhuguocheng29.github.io/tags/%E7%AE%97%E6%B3%95/</link>
+      <link>https://www.zhuguocheng29.cn/tags/%E7%AE%97%E6%B3%95/</link>
       <pubDate>Fri, 08 Sep 2017 11:12:34 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/tags/%E7%AE%97%E6%B3%95/</guid>
+      <guid>https://www.zhuguocheng29.cn/tags/%E7%AE%97%E6%B3%95/</guid>
       <description></description>
     </item>
     
     <item>
       <title>算法证明</title>
-      <link>https://zhuguocheng29.github.io/tags/%E7%AE%97%E6%B3%95%E8%AF%81%E6%98%8E/</link>
+      <link>https://www.zhuguocheng29.cn/tags/%E7%AE%97%E6%B3%95%E8%AF%81%E6%98%8E/</link>
       <pubDate>Sat, 08 Jul 2017 14:11:17 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/tags/%E7%AE%97%E6%B3%95%E8%AF%81%E6%98%8E/</guid>
+      <guid>https://www.zhuguocheng29.cn/tags/%E7%AE%97%E6%B3%95%E8%AF%81%E6%98%8E/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>面向对象设计模式</title>
+      <link>https://www.zhuguocheng29.cn/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</link>
+      <pubDate>Wed, 13 Feb 2019 22:01:32 +0800</pubDate>
+      
+      <guid>https://www.zhuguocheng29.cn/tags/%E9%9D%A2%E5%90%91%E5%AF%B9%E8%B1%A1%E8%AE%BE%E8%AE%A1%E6%A8%A1%E5%BC%8F/</guid>
       <description></description>
     </item>
     

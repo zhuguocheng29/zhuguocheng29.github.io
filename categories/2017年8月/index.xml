@@ -2,175 +2,175 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>2017年8月 on 好好学习，天天向上</title>
-    <link>https://zhuguocheng29.github.io/categories/2017%E5%B9%B48%E6%9C%88/</link>
+    <link>https://www.zhuguocheng29.cn/categories/2017%E5%B9%B48%E6%9C%88/</link>
     <description>Recent content in 2017年8月 on 好好学习，天天向上</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <copyright>Powered by [Zhuguocheng](http://www.zhuguocheng29.cn). Theme by [PPOffice](http://github.com/ppoffice).</copyright>
+    <copyright>Powered by [Zhuguocheng](http://www.zhuguocheng29.cn). Theme by [PPOffice](http://github.com/ppoffice). 备案: [冀ICP备16005710号-1](http://www.miitbeian.gov.cn)</copyright>
     <lastBuildDate>Thu, 24 Aug 2017 14:53:29 +0800</lastBuildDate>
     
-	<atom:link href="https://zhuguocheng29.github.io/categories/2017%E5%B9%B48%E6%9C%88/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://www.zhuguocheng29.cn/categories/2017%E5%B9%B48%E6%9C%88/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>编程之美 数字中的技巧2</title>
-      <link>https://zhuguocheng29.github.io/2017/08/24/%E7%BC%96%E7%A8%8B%E4%B9%8B%E7%BE%8E-%E6%95%B0%E5%AD%97%E4%B8%AD%E7%9A%84%E6%8A%80%E5%B7%A72/</link>
+      <link>https://www.zhuguocheng29.cn/2017/08/24/%E7%BC%96%E7%A8%8B%E4%B9%8B%E7%BE%8E-%E6%95%B0%E5%AD%97%E4%B8%AD%E7%9A%84%E6%8A%80%E5%B7%A72/</link>
       <pubDate>Thu, 24 Aug 2017 14:53:29 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/2017/08/24/%E7%BC%96%E7%A8%8B%E4%B9%8B%E7%BE%8E-%E6%95%B0%E5%AD%97%E4%B8%AD%E7%9A%84%E6%8A%80%E5%B7%A72/</guid>
+      <guid>https://www.zhuguocheng29.cn/2017/08/24/%E7%BC%96%E7%A8%8B%E4%B9%8B%E7%BE%8E-%E6%95%B0%E5%AD%97%E4%B8%AD%E7%9A%84%E6%8A%80%E5%B7%A72/</guid>
       <description>&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>编程之美-数字中的技巧1</title>
-      <link>https://zhuguocheng29.github.io/2017/08/23/%E7%BC%96%E7%A8%8B%E4%B9%8B%E7%BE%8E-%E6%95%B0%E5%AD%97%E4%B8%AD%E7%9A%84%E6%8A%80%E5%B7%A71/</link>
+      <link>https://www.zhuguocheng29.cn/2017/08/23/%E7%BC%96%E7%A8%8B%E4%B9%8B%E7%BE%8E-%E6%95%B0%E5%AD%97%E4%B8%AD%E7%9A%84%E6%8A%80%E5%B7%A71/</link>
       <pubDate>Wed, 23 Aug 2017 14:59:41 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/2017/08/23/%E7%BC%96%E7%A8%8B%E4%B9%8B%E7%BE%8E-%E6%95%B0%E5%AD%97%E4%B8%AD%E7%9A%84%E6%8A%80%E5%B7%A71/</guid>
+      <guid>https://www.zhuguocheng29.cn/2017/08/23/%E7%BC%96%E7%A8%8B%E4%B9%8B%E7%BE%8E-%E6%95%B0%E5%AD%97%E4%B8%AD%E7%9A%84%E6%8A%80%E5%B7%A71/</guid>
       <description>&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>HBase GC</title>
-      <link>https://zhuguocheng29.github.io/2017/08/14/hbase-gc/</link>
+      <link>https://www.zhuguocheng29.cn/2017/08/14/hbase-gc/</link>
       <pubDate>Mon, 14 Aug 2017 15:35:10 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/2017/08/14/hbase-gc/</guid>
+      <guid>https://www.zhuguocheng29.cn/2017/08/14/hbase-gc/</guid>
       <description>&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>二叉树找最近公共父节点</title>
-      <link>https://zhuguocheng29.github.io/2017/08/13/%E4%BA%8C%E5%8F%89%E6%A0%91%E6%89%BE%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%88%B6%E8%8A%82%E7%82%B9/</link>
+      <link>https://www.zhuguocheng29.cn/2017/08/13/%E4%BA%8C%E5%8F%89%E6%A0%91%E6%89%BE%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%88%B6%E8%8A%82%E7%82%B9/</link>
       <pubDate>Sun, 13 Aug 2017 22:09:53 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/2017/08/13/%E4%BA%8C%E5%8F%89%E6%A0%91%E6%89%BE%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%88%B6%E8%8A%82%E7%82%B9/</guid>
+      <guid>https://www.zhuguocheng29.cn/2017/08/13/%E4%BA%8C%E5%8F%89%E6%A0%91%E6%89%BE%E6%9C%80%E8%BF%91%E5%85%AC%E5%85%B1%E7%88%B6%E8%8A%82%E7%82%B9/</guid>
       <description>&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>HBase_blockcache</title>
-      <link>https://zhuguocheng29.github.io/2017/08/13/hbase_blockcache/</link>
+      <link>https://www.zhuguocheng29.cn/2017/08/13/hbase_blockcache/</link>
       <pubDate>Sun, 13 Aug 2017 11:53:37 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/2017/08/13/hbase_blockcache/</guid>
+      <guid>https://www.zhuguocheng29.cn/2017/08/13/hbase_blockcache/</guid>
       <description>&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>LeetCode Repeated DNA Sequences</title>
-      <link>https://zhuguocheng29.github.io/2017/08/12/leetcode-repeated-dna-sequences/</link>
+      <link>https://www.zhuguocheng29.cn/2017/08/12/leetcode-repeated-dna-sequences/</link>
       <pubDate>Sat, 12 Aug 2017 10:56:24 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/2017/08/12/leetcode-repeated-dna-sequences/</guid>
+      <guid>https://www.zhuguocheng29.cn/2017/08/12/leetcode-repeated-dna-sequences/</guid>
       <description>&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>LeetCode 3Sum Closest</title>
-      <link>https://zhuguocheng29.github.io/2017/08/10/leetcode-3sum-closest/</link>
+      <link>https://www.zhuguocheng29.cn/2017/08/10/leetcode-3sum-closest/</link>
       <pubDate>Thu, 10 Aug 2017 09:56:08 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/2017/08/10/leetcode-3sum-closest/</guid>
+      <guid>https://www.zhuguocheng29.cn/2017/08/10/leetcode-3sum-closest/</guid>
       <description>&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>HBase源码解析</title>
-      <link>https://zhuguocheng29.github.io/2017/08/09/hbase%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/</link>
+      <link>https://www.zhuguocheng29.cn/2017/08/09/hbase%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/</link>
       <pubDate>Wed, 09 Aug 2017 15:47:29 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/2017/08/09/hbase%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/</guid>
+      <guid>https://www.zhuguocheng29.cn/2017/08/09/hbase%E6%BA%90%E7%A0%81%E8%A7%A3%E6%9E%90/</guid>
       <description>&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
-      <title>LeetCode Search for a Rangee</title>
-      <link>https://zhuguocheng29.github.io/2017/08/09/leetcode-search-for-a-rangee/</link>
+      <title>LeetCode Search for a Range</title>
+      <link>https://www.zhuguocheng29.cn/2017/08/09/leetcode-search-for-a-range/</link>
       <pubDate>Wed, 09 Aug 2017 10:44:50 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/2017/08/09/leetcode-search-for-a-rangee/</guid>
+      <guid>https://www.zhuguocheng29.cn/2017/08/09/leetcode-search-for-a-range/</guid>
       <description>&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Java笔记</title>
-      <link>https://zhuguocheng29.github.io/2017/08/09/java%E7%AC%94%E8%AE%B0/</link>
+      <link>https://www.zhuguocheng29.cn/2017/08/09/java%E7%AC%94%E8%AE%B0/</link>
       <pubDate>Wed, 09 Aug 2017 10:40:46 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/2017/08/09/java%E7%AC%94%E8%AE%B0/</guid>
+      <guid>https://www.zhuguocheng29.cn/2017/08/09/java%E7%AC%94%E8%AE%B0/</guid>
       <description>&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>Unique Binary Search Trees II</title>
-      <link>https://zhuguocheng29.github.io/2017/08/08/unique-binary-search-trees-ii/</link>
+      <link>https://www.zhuguocheng29.cn/2017/08/08/unique-binary-search-trees-ii/</link>
       <pubDate>Tue, 08 Aug 2017 13:56:16 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/2017/08/08/unique-binary-search-trees-ii/</guid>
+      <guid>https://www.zhuguocheng29.cn/2017/08/08/unique-binary-search-trees-ii/</guid>
       <description>&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>LeetCode Out of Boundary Paths</title>
-      <link>https://zhuguocheng29.github.io/2017/08/07/leetcode-out-of-boundary-paths/</link>
+      <link>https://www.zhuguocheng29.cn/2017/08/07/leetcode-out-of-boundary-paths/</link>
       <pubDate>Mon, 07 Aug 2017 10:00:13 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/2017/08/07/leetcode-out-of-boundary-paths/</guid>
+      <guid>https://www.zhuguocheng29.cn/2017/08/07/leetcode-out-of-boundary-paths/</guid>
       <description>&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>LeetCode Course Schedule</title>
-      <link>https://zhuguocheng29.github.io/2017/08/05/leetcode-course-schedule/</link>
+      <link>https://www.zhuguocheng29.cn/2017/08/05/leetcode-course-schedule/</link>
       <pubDate>Sat, 05 Aug 2017 10:30:02 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/2017/08/05/leetcode-course-schedule/</guid>
+      <guid>https://www.zhuguocheng29.cn/2017/08/05/leetcode-course-schedule/</guid>
       <description>&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>LeetCode Construct Binary Tree Traversal</title>
-      <link>https://zhuguocheng29.github.io/2017/08/03/leetcode-construct-binary-tree-traversal/</link>
+      <link>https://www.zhuguocheng29.cn/2017/08/03/leetcode-construct-binary-tree-traversal/</link>
       <pubDate>Thu, 03 Aug 2017 19:23:13 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/2017/08/03/leetcode-construct-binary-tree-traversal/</guid>
+      <guid>https://www.zhuguocheng29.cn/2017/08/03/leetcode-construct-binary-tree-traversal/</guid>
       <description>&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>LeetCode Unique SubstringscC in Wraparound String</title>
-      <link>https://zhuguocheng29.github.io/2017/08/03/leetcode-unique-substringscc-in-wraparound-string/</link>
+      <link>https://www.zhuguocheng29.cn/2017/08/03/leetcode-unique-substringscc-in-wraparound-string/</link>
       <pubDate>Thu, 03 Aug 2017 10:52:16 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/2017/08/03/leetcode-unique-substringscc-in-wraparound-string/</guid>
+      <guid>https://www.zhuguocheng29.cn/2017/08/03/leetcode-unique-substringscc-in-wraparound-string/</guid>
       <description>&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>ElasticSearch</title>
-      <link>https://zhuguocheng29.github.io/2017/08/01/elasticsearch/</link>
+      <link>https://www.zhuguocheng29.cn/2017/08/01/elasticsearch/</link>
       <pubDate>Tue, 01 Aug 2017 19:05:00 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/2017/08/01/elasticsearch/</guid>
+      <guid>https://www.zhuguocheng29.cn/2017/08/01/elasticsearch/</guid>
       <description>&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>LeetCode Rotate Function</title>
-      <link>https://zhuguocheng29.github.io/2017/08/01/leetcode-rotate-function/</link>
+      <link>https://www.zhuguocheng29.cn/2017/08/01/leetcode-rotate-function/</link>
       <pubDate>Tue, 01 Aug 2017 10:46:13 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/2017/08/01/leetcode-rotate-function/</guid>
+      <guid>https://www.zhuguocheng29.cn/2017/08/01/leetcode-rotate-function/</guid>
       <description>&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
     <item>
       <title>LeetCode ugly Number II</title>
-      <link>https://zhuguocheng29.github.io/2017/08/01/leetcode-ugly-number-ii/</link>
+      <link>https://www.zhuguocheng29.cn/2017/08/01/leetcode-ugly-number-ii/</link>
       <pubDate>Tue, 01 Aug 2017 09:49:41 +0800</pubDate>
       
-      <guid>https://zhuguocheng29.github.io/2017/08/01/leetcode-ugly-number-ii/</guid>
+      <guid>https://www.zhuguocheng29.cn/2017/08/01/leetcode-ugly-number-ii/</guid>
       <description>&lt;p&gt;&lt;/p&gt;</description>
     </item>
     
